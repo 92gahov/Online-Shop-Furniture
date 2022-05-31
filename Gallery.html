@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Furniture">
+    <meta name="keywords" content="furniture, wardrobre, bed, table, showcase, others">
+    <meta name="author" content="Georgi Gahov">
+    <title>Gahov Furniture - Галерия</title>
+    <link rel="stylesheet" href="CSS/HeaderAndFooter.css">
+    <link rel="stylesheet" href="CSS/Gallery.css">
+    <link href='https://fonts.googleapis.com/css?family=Neuton' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+    <style>
+        body {
+            background: url("Image/background.jpg") repeat;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <header>
+        <div class="mobileLogo"><a href="FrontPage.html">Gahov
+                Furniture</a></div>
+        <div class="header">
+            <div class="imgCont">
+                <a href="FrontPage.html">
+                    <img src="Image/furn.jpg" width="160" height="160">
+                </a>
+            </div>
+
+            <div class="SgCont">
+                <div class="mainSearch">
+                    <form method="post" action="#">
+                        <input type="text" id="main-search" onkeyup="getSearching()" required placeholder="Търсене..."
+                            autocomplete="off"><br>
+                        <input class="mSbtn" type="button" onclick="search()" value="Търси">
+                    </form>
+                </div>
+                <ul class="main-search-cont" id="main-search-cont">
+                    <li><a href="OthersPage4.html">Бюра</a></li>
+                    <li><a href="OthersPage4.html">Бюро</a></li>
+                    <li><a href="ShowcasePage1.html">Витрина</a></li>
+                    <li><a href="ShowcasePage1.html">Витрини</a></li>
+                    <li><a href="OthersPage3.html">Врата</a></li>
+                    <li><a href="OthersPage3.html">Врати</a></li>
+                    <li><a href="WardrobePage1.html">Гардероб</a></li>
+                    <li><a href="WardrobePage1.html">Гардероби</a></li>
+                    <li><a href="OthersPage1.html">Детско легло</a></li>
+                    <li><a href="OthersPage1.html">Други</a></li>
+                    <li><a href="OthersPage2.html">Етажерка за стена</a></li>
+                    <li><a href="OthersPage6.html">Кухни</a></li>
+                    <li><a href="OthersPage6.html">Кухня</a></li>
+                    <li><a href="OthersPage3.html">Ламперия</a></li>
+                    <li><a href="OthersPage1.html">Малка библиотека</a></li>
+                    <li><a href="TablePage1.html">Маса</a></li>
+                    <li><a href="TablePage1.html">Маси</a></li>
+                    <li><a href="BedsPage1.html">Спални</a></li>
+                    <li><a href="BedsPage1.html">Спалня</a></li>
+                    <li><a href="OthersPage2.html">ТВ секция</a></li>
+                    <li><a href="OthersPage1.html">ТВ шкаф</a></li>
+                    <li><a href="OthersPage2.html">Тоалетка</a></li>
+                    <li><a href="OthersPage1.html">Шкаф</a></li>
+                </ul>
+                <div class="greetings">
+                    <p id="idGreetings"></p>
+                </div>
+            </div>
+
+            <div class="profile">
+                <div class="profileImg" id="profileImg">
+                    <img src="Image/profile logo.png" title="Профил" width="46" height="46">
+                </div>
+                <div class="profileName" id="profileName">
+                    <p id="idprofileName"></p>
+                </div>
+                <div class="eBtn">
+                    <input type="button" id="eBtn"
+                        onclick="document.getElementById('iddivForm1').style.display = 'block'" value="Вход">
+                </div>
+                <div class="exBtn" id="exBtn">
+                    <input type="button" id="idexBtn" value="Изход">
+                </div>
+                <div class="divForm1" id="iddivForm1">
+                    <form name="form1" id="form1" class="form1" method="post" action="#">
+                        <label for="uname" id="unameL">Потребител:</label>
+                        <span id="closeForm" class="closeForm">&times;</span><br>
+                        <input type="text" id="uname" name="uname" placeholder="Потребител..." autocomplete="off"
+                            required><br>
+                        <label for="psw" id="pswL">Парола:</label><br>
+                        <input type="password" id="psw" name="psw" placeholder="Парола..." autocomplete="off"
+                            required><br>
+                        <div class="eye"><img onclick="showPsw()" src="Image/eye icon.png" width="30" height="18"
+                                title="Покажи парола"></div>
+                        <span class="wrong" id="wrong"></span><br>
+                        <input type="checkbox"> Запомни ме!<br>
+                        <input type="submit" value="Вход"><br>
+                        <input type="button" id="reg" value="Регистрация" onclick="goToRegister()"><br>
+                        <a class="forgotpsw" href="Forgotten_password.html">Забравена
+                            парола?</a>
+                    </form>
+                </div>
+                <div class="loading" id="loading"></div>
+            </div>
+
+            <div class="LSC">
+                <div class="linksMobile">
+                    <span class="openNavMobile" id="openNav" onclick="openNav()">&#9776;</span>
+                </div>
+                <div class="searchMobile">
+                    <button id="searchButtonMobileUp"
+                        onclick="document.getElementById('mainSearchMobileCont').style.display = 'block'">Търси</button>
+                </div>
+                <div class="cart">
+                    <div class="cartImg">
+                        <img src="Image/cart logo.png" title="Количка" width="46" height="46">
+                    </div>
+                    <div class="cartName">
+                        <a href="Cart.html">Количка <span>0</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="modalShadow" id="modalShadow">
+        <div class="questionFrame" id="questionFrame">
+            <div class="closeQuestion">
+                <button id="closeQuestion">&times;</button>
+            </div>
+            <div class="question">
+                <div class="questionCont">
+                    <div>
+                        <img src="Image/attention.png" width="60" height="60">
+                    </div>
+                    <div>
+                        <div class="paragraph">
+                            <p>Сигурни ли сте, че искате да напуснете профила си?</p>
+                        </div>
+                        <div class="answers">
+                            <button id="answerYes">Да</button>
+                            <button id="answerNo">Не</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navLinksDesctop" id="navLinksDesctop">
+        <a href="WardrobePage1.html">Гардероби</a>
+        <a href="TablePage1.html">Маси</a>
+        <a href="BedsPage1.html">Спални</a>
+        <a href="ShowcasePage1.html">Витрини</a>
+        <a href="OthersPage1.html">Други</a>
+    </nav>
+
+    <div class="mainSearchMobileCont" id="mainSearchMobileCont">
+        <input type="text" id="searchFieldMobile" onkeyup="getSearchingM()" autocomplete="off" required
+            placeholder="Търсене..."><br>
+        <button id="searchButtonMobile" onclick="searchM()">Търси</button>
+    </div>
+    <ul class="main-search-cont-m" id="main-search-cont-m">
+        <li><a href="OthersPage4.html">Бюра</a></li>
+        <li><a href="OthersPage4.html">Бюро</a></li>
+        <li><a href="ShowcasePage1.html">Витрина</a></li>
+        <li><a href="ShowcasePage1.html">Витрини</a></li>
+        <li><a href="OthersPage3.html">Врата</a></li>
+        <li><a href="OthersPage3.html">Врати</a></li>
+        <li><a href="WardrobePage1.html">Гардероб</a></li>
+        <li><a href="WardrobePage1.html">Гардероби</a></li>
+        <li><a href="OthersPage1.html">Детско легло</a></li>
+        <li><a href="OthersPage1.html">Други</a></li>
+        <li><a href="OthersPage2.html">Етажерка за стена</a></li>
+        <li><a href="OthersPage6.html">Кухни</a></li>
+        <li><a href="OthersPage6.html">Кухня</a></li>
+        <li><a href="OthersPage3.html">Ламперия</a></li>
+        <li><a href="OthersPage1.html">Малка библиотека</a></li>
+        <li><a href="TablePage1.html">Маса</a></li>
+        <li><a href="TablePage1.html">Маси</a></li>
+        <li><a href="BedsPage1.html">Спални</a></li>
+        <li><a href="BedsPage1.html">Спалня</a></li>
+        <li><a href="OthersPage2.html">ТВ секция</a></li>
+        <li><a href="OthersPage1.html">ТВ шкаф</a></li>
+        <li><a href="OthersPage2.html">Тоалетка</a></li>
+        <li><a href="OthersPage1.html">Шкаф</a></li>
+    </ul>
+
+    <div id="idnavMobileCont" class="navMobileCont">
+        <nav>
+            <span id="closeNav" class="closeNav">&times;</span>
+            <a href="WardrobePage1.html">Гардероби</a>
+            <a href="TablePage1.html">Маси</a>
+            <a href="BedsPage1.html">Спални</a>
+            <a href="ShowcasePage1.html">Витрини</a>
+            <a href="OthersPage1.html">Други</a>
+        </nav>
+    </div>
+
+    <!--------------------------End header.---------------------->
+
+    <div class="gallery-main">
+        <div class="gallery-container">
+            <div class="slides fade">
+                <div class="numbers">1 / 20</div>
+                <img src="Gallery/gallery1.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">2 / 20</div>
+                <img src="Gallery/gallery2.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">3 / 20</div>
+                <img src="Gallery/gallery3.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">4 / 20</div>
+                <img src="Gallery/gallery4.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">5 / 20</div>
+                <img src="Gallery/gallery5.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">6 / 20</div>
+                <img src="Gallery/gallery6.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">7 / 20</div>
+                <img src="Gallery/gallery7.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">8 / 20</div>
+                <img src="Gallery/gallery8.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">9 / 20</div>
+                <img src="Gallery/gallery9.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">10 / 20</div>
+                <img src="Gallery/gallery10.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">11 / 20</div>
+                <img src="Gallery/gallery11.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">12 / 20</div>
+                <img src="Gallery/gallery12.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">13 / 20</div>
+                <img src="Gallery/gallery13.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">14 / 20</div>
+                <img src="Gallery/gallery14.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">15 / 20</div>
+                <img src="Gallery/gallery15.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">16 / 20</div>
+                <img src="Gallery/gallery16.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">17 / 20</div>
+                <img src="Gallery/gallery17.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">18 / 20</div>
+                <img src="Gallery/gallery18.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">19 / 20</div>
+                <img src="Gallery/gallery19.jpg" style="width: 100%; height: 600px;">
+            </div>
+            <div class="slides fade">
+                <div class="numbers">20 / 20</div>
+                <img src="Gallery/gallery20.jpg" style="width: 100%; height: 600px;">
+            </div>
+        </div>
+        <button type="button" class="prev" onclick="plusSlides(-1)">&laquo;</button>
+        <button type="button" class="next" onclick="plusSlides(1)">&raquo;</button>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery1.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(1)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery2.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(2)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery3.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(3)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery4.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(4)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery5.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(5)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery6.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(6)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery7.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(7)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery8.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(8)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery9.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(9)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery10.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(10)">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery11.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(11)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery12.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(12)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery13.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(13)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery14.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(14)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery15.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(15)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery16.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(16)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery17.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(17)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery18.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(18)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery19.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(19)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gallery/gallery20.jpg" style="width: 100%; height: 120px;"
+                onclick="currentSlide(20)">
+        </div>
+    </div>
+
+    <!------------Gallery for small screen.------------>
+
+    <div class="gallery-m-main">
+        <div class="gallery-m-cont">
+            <img src="Gallery/gallery1.jpg" onclick="openModalM(); currentSlideM(1)" width="200" height="180">
+            <img src="Gallery/gallery2.jpg" onclick="openModalM(); currentSlideM(2)" width="200" height="180">
+        </div>
+        <div class="gallery-m-cont">
+            <img src="Gallery/gallery3.jpg" onclick="openModalM(); currentSlideM(3)" width="200" height="180">
+            <img src="Gallery/gallery4.jpg" onclick="openModalM(); currentSlideM(4)" width="200" height="180">
+        </div>
+        <div class="gallery-m-cont">
+            <img src="Gallery/gallery5.jpg" onclick="openModalM(); currentSlideM(5)" width="200" height="180">
+            <img src="Gallery/gallery6.jpg" onclick="openModalM(); currentSlideM(6)" width="200" height="180">
+        </div>
+        <div class="gallery-m-cont">
+            <img src="Gallery/gallery7.jpg" onclick="openModalM(); currentSlideM(7)" width="200" height="180">
+            <img src="Gallery/gallery8.jpg" onclick="openModalM(); currentSlideM(8)" width="200" height="180">
+        </div>
+        <div class="gallery-m-cont">
+            <img src="Gallery/gallery9.jpg" onclick="openModalM(); currentSlideM(9)" width="200" height="180">
+            <img src="Gallery/gallery10.jpg" onclick="openModalM(); currentSlideM(10)" width="200" height="180">
+        </div>
+        <div class="gallery-m-cont">
+            <img src="Gallery/gallery11.jpg" onclick="openModalM(); currentSlideM(11)" width="200" height="180">
+            <img src="Gallery/gallery12.jpg" onclick="openModalM(); currentSlideM(12)" width="200" height="180">
+        </div>
+        <div class="gallery-m-cont">
+            <img src="Gallery/gallery13.jpg" onclick="openModalM(); currentSlideM(13)" width="200" height="180">
+            <img src="Gallery/gallery14.jpg" onclick="openModalM(); currentSlideM(14)" width="200" height="180">
+        </div>
+        <div class="gallery-m-cont">
+            <img src="Gallery/gallery15.jpg" onclick="openModalM(); currentSlideM(15)" width="200" height="180">
+            <img src="Gallery/gallery16.jpg" onclick="openModalM(); currentSlideM(16)" width="200" height="180">
+        </div>
+        <div class="gallery-m-cont">
+            <img src="Gallery/gallery17.jpg" onclick="openModalM(); currentSlideM(17)" width="200" height="180">
+            <img src="Gallery/gallery18.jpg" onclick="openModalM(); currentSlideM(18)" width="200" height="180">
+        </div>
+        <div class="gallery-m-cont">
+            <img src="Gallery/gallery19.jpg" onclick="openModalM(); currentSlideM(19)" width="200" height="180">
+            <img src="Gallery/gallery20.jpg" onclick="openModalM(); currentSlideM(20)" width="200" height="180">
+        </div>
+    </div>
+
+    <div class="gallery-modal" id="gallery-modal">
+        <span class="close-gallery-modal" onclick="closeModalM()">&times;</span>
+        <div class="modal-cont">
+            <div class="numbers-m">1 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery1.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">2 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery2.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">3 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery3.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">4 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery4.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">5 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery5.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">6 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery6.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">7 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery7.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">8 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery8.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">9 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery9.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">10 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery10.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">11 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery11.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">12 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery12.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">13 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery13.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">14 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery14.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">15 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery15.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">16 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery16.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">17 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery17.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">18 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery18.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">19 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery19.jpg" width="100%" height="400px">
+            </div>
+            <div class="numbers-m">20 / 20</div>
+            <div class="slides-m">
+                <img src="Gallery/gallery20.jpg" width="100%" height="400px">
+            </div>
+        </div>
+        <button type="button" class="prev-m" onclick="plusSlidesM(-1)">&#10094;</button>
+        <button type="button" class="next-m" onclick="plusSlidesM(1)">&#10095;</button>
+    </div>
+
+    <!----------------------Start footer.------------------>
+
+    <div class="footerDesctop" style="margin-top: 36px;">
+        <div>
+            <a href="FrontPage.html">Начало</a>
+        </div>
+        <div>
+            <a href="AboutUs.html">За нас</a>
+        </div>
+        <div>
+            <a href="Blog.html">Блог</a>
+        </div>
+        <div>
+            <a href="Gallery.html">Галерия</a>
+        </div>
+        <div>
+            <a href="Contact.html">Контакти</a>
+        </div>
+    </div>
+
+    <div class="footer-end-main">
+        <div class="footer-end">
+            <div class="footer-copy">
+                <p>Copyright&#169; 2022 &nbsp;&nbsp;<span style="font-weight: bold;">|</span>&nbsp;&nbsp; All rights
+                    reserved</p>
+            </div>
+            <div class="author">
+                <p>Created By <a href="#">G. Gahov</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footerMobileLinks" id="footerMobileLinks">
+        <a href="FrontPage.html">Начало</a><br>
+        <a href="AboutUs.html">За нас</a><br>
+        <a href="Blog.html">Блог</a><br>
+        <a href="Gallery.html">Галерия</a><br>
+        <a href="Contact.html">Контакти</a>
+        <div class="footer-end-main-s">
+            <p>Copyright&#169; 2022 &nbsp;&nbsp;<span style="font-weight: bold;">|</span>&nbsp;&nbsp; All rights
+                reserved</p>
+            <p>Created By <a href="#" style="display: inline; font-size: 18px; text-decoration: underline;">G. Gahov</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="footerMobileMain">
+        <div class="footerMobileButtonMain" id="footerMobileButtonMain">
+            <div class="footerMobileButton" id="footerMobileButton" onclick="classList.toggle('change')">
+                <div class="divFooter1"></div>
+                <div class="divFooter2"></div>
+                <div class="divFooter3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------Scripts.------------------->
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides((slideIndex += n));
+        }
+        function currentSlide(n) {
+            showSlides((slideIndex = n));
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        };
+
+        //---------------------------------------------------------------------
+
+        function openModalM() {
+            document.getElementById("gallery-modal").style.display = "block";
+        };
+        function closeModalM() {
+            document.getElementById("gallery-modal").style.display = "none";
+        };
+        var slideIndexM = 1;
+        showSlidesM(slideIndexM);
+
+        function plusSlidesM(n) {
+            showSlidesM(slideIndexM += n);
+        }
+        function currentSlideM(n) {
+            showSlidesM(slideIndexM = n);
+        }
+
+        function showSlidesM(n) {
+            var y;
+            var slidesm = document.getElementsByClassName("slides-m");
+            var numbers = document.getElementsByClassName("numbers-m");
+            if (n > numbers.length) {
+                slideIndexM = 1;
+            }
+            if (n < 1) {
+                slideIndexM = numbers.length;
+            }
+            if (n > slidesm.length) {
+                slideIndexM = 1;
+            }
+            if (n < 1) {
+                slideIndexM = slidesm.length;
+            }
+            for (y = 0; y < numbers.length; y++) {
+                numbers[y].style.display = "none";
+            }
+            numbers[slideIndexM - 1].style.display = "block";
+            for (y = 0; y < slidesm.length; y++) {
+                slidesm[y].style.display = "none";
+            }
+            slidesm[slideIndexM - 1].style.display = "block";
+        }
+    </script>
+    <script src="JS/HeaderAndFooter.js"></script>
+</body>
+
+</html>

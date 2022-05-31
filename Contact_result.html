@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact result</title>
+    <style>
+        form {
+            display: none;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 6px 12px;
+            margin-left: 20px;
+            border: 2px solid black;
+        }
+
+        button:nth-child(1) {
+            background-color: #1ed14b;
+            color: black;
+        }
+
+        button:nth-child(1):hover {
+            background-color: #005c12;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:nth-child(2) {
+            background-color: #ff8085;
+            color: black;
+        }
+
+        button:nth-child(2):hover {
+            background-color: #8a2424;
+            color: white;
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .container p {
+            font-size: 22px;
+        }
+
+        #name-value {
+            border: 2px solid black;
+            height: 34px;
+            width: 280px;
+            margin-top: 30px;
+            margin-left: 20px;
+            font-size: 20px;
+            padding: 8px;
+        }
+
+        #phone-value {
+            border: 2px solid black;
+            height: 34px;
+            width: 280px;
+            margin-top: 30px;
+            margin-left: 20px;
+            font-size: 20px;
+            padding: 8px;
+        }
+
+        #email-value {
+            border: 2px solid black;
+            height: 34px;
+            width: 280px;
+            margin-top: 30px;
+            margin-left: 20px;
+            font-size: 20px;
+            padding: 8px;
+        }
+
+        #msg-value {
+            border: 2px solid black;
+            height: 180px;
+            width: 280px;
+            margin-top: 30px;
+            margin-left: 20px;
+            font-size: 20px;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="POST" action="#" id="contactForm" name="contactForm" onsubmit="return ValidateContact()">
+        <div class="inputField">
+            <input type="text" id="nameC" name="nameC" placeholder=" " autocomplete="off">
+            <span class="span1">Име</span>
+        </div>
+        <div class="inputField">
+            <input type="tel" id="telC" name="telC" placeholder=" " autocomplete="off">
+            <span class="span1">Телефон</span>
+        </div>
+        <div class="inputField">
+            <input type="text" id="emailC" name="emailC" placeholder=" " autocomplete="off">
+            <span class="span1">Имейл</span>
+        </div>
+        <div class="inputField">
+            <textarea id="textC" rows="8" cols="40" name="textC" placeholder=" " autocomplete="off"></textarea>
+            <span class="span2">Съобщение</span>
+        </div>
+        <input type="submit" value="Изпрати съобщение">
+    </form>
+    <div>
+        <h2>Изпратени съобщения: <span id="msg-numbers">0</span></h2>
+    </div>
+    <div class="buttons">
+        <button onclick="showMsg()">Прочети</button>
+        <button onclick="deleteMsg()">Изтрий</button>
+    </div>
+    <div class="container">
+        <div class="name">
+            <p>Име:</p>
+            <div id="name-value"></div>
+        </div>
+        <div class="phone">
+            <p>Телефон:</p>
+            <div id="phone-value"></div>
+        </div>
+        <div class="email">
+            <p>Имейл:</p>
+            <div id="email-value"></div>
+        </div>
+        <div class="message">
+            <p>Съобщение:</p>
+            <div id="msg-value"></div>
+        </div>
+    </div>
+
+    <script>
+        function sendName() {
+            var Aname = !!localStorage.getItem("name") ? JSON.parse(localStorage.getItem("name")) : [];
+            var name = document.getElementById("nameC").value;
+            Aname.push(name);
+            localStorage.setItem("name", JSON.stringify(Aname));
+        };
+        function sendPhone() {
+            var Aphone = !!localStorage.getItem("phone") ? JSON.parse(localStorage.getItem("phone")) : [];
+            var phone = document.getElementById("telC").value;
+            Aphone.push(phone);
+            localStorage.setItem("phone", JSON.stringify(Aphone));
+        };
+        function sendEmail() {
+            var Aemail = !!localStorage.getItem("email") ? JSON.parse(localStorage.getItem("email")) : [];
+            var email = document.getElementById("emailC").value;
+            Aemail.push(email);
+            localStorage.setItem("email", JSON.stringify(Aemail));
+        };
+        function sendMessage() {
+            var Amsg = !!localStorage.getItem("message") ? JSON.parse(localStorage.getItem("message")) : [];
+            var msg = document.getElementById("textC").value;
+            Amsg.push(msg);
+            localStorage.setItem("message", JSON.stringify(Amsg));
+        };
+
+        ////////////////////////////////////////
+
+        function showMsg() {
+            var Aname = !!localStorage.getItem("name") ? JSON.parse(localStorage.getItem("name")) : [];
+            var Aphone = !!localStorage.getItem("phone") ? JSON.parse(localStorage.getItem("phone")) : [];
+            var Aemail = !!localStorage.getItem("email") ? JSON.parse(localStorage.getItem("email")) : [];
+            var Amsg = !!localStorage.getItem("message") ? JSON.parse(localStorage.getItem("message")) : [];
+            var name = document.getElementById("nameC").value;
+            var phone = document.getElementById("telC").value;
+            var email = document.getElementById("emailC").value;
+            var msg = document.getElementById("textC").value;
+            localStorage.setItem("name", JSON.stringify(Aname));
+            localStorage.setItem("phone", JSON.stringify(Aphone));
+            localStorage.setItem("email", JSON.stringify(Aemail));
+            localStorage.setItem("message", JSON.stringify(Amsg));
+            document.getElementById("name-value").innerHTML = Aname[0];
+            document.getElementById("phone-value").innerHTML = Aphone[0];
+            document.getElementById("email-value").innerHTML = Aemail[0];
+            document.getElementById("msg-value").innerHTML = Amsg[0]
+            if (Aname[0] === undefined) {
+                localStorage.removeItem("name");
+                localStorage.removeItem("phone");
+                localStorage.removeItem("email");
+                localStorage.removeItem("message");
+                document.getElementById("msg-value").innerHTML = "Няма изпратени съобщения.";
+                document.getElementById("name-value").innerHTML = "";
+                document.getElementById("phone-value").innerHTML = "";
+                document.getElementById("email-value").innerHTML = "";
+            };
+        };
+
+        ///////////////////////////////////////////////
+
+        function deleteMsg() {
+            var Aname = !!localStorage.getItem("name") ? JSON.parse(localStorage.getItem("name")) : [];
+            var Aphone = !!localStorage.getItem("phone") ? JSON.parse(localStorage.getItem("phone")) : [];
+            var Aemail = !!localStorage.getItem("email") ? JSON.parse(localStorage.getItem("email")) : [];
+            var Amsg = !!localStorage.getItem("message") ? JSON.parse(localStorage.getItem("message")) : [];
+            var name = document.getElementById("nameC").value;
+            var phone = document.getElementById("telC").value;
+            var email = document.getElementById("emailC").value;
+            var msg = document.getElementById("textC").value;
+            Aname.shift();
+            Aphone.shift();
+            Aemail.shift();
+            Amsg.shift();
+            localStorage.setItem("name", JSON.stringify(Aname));
+            localStorage.setItem("phone", JSON.stringify(Aphone));
+            localStorage.setItem("email", JSON.stringify(Aemail));
+            localStorage.setItem("message", JSON.stringify(Amsg));
+            document.getElementById("name-value").innerHTML = "";
+            document.getElementById("phone-value").innerHTML = "";
+            document.getElementById("email-value").innerHTML = "";
+            document.getElementById("msg-value").innerHTML = "";
+            if (Aname[0] === undefined) {
+                localStorage.removeItem("name");
+                localStorage.removeItem("phone");
+                localStorage.removeItem("email");
+                localStorage.removeItem("message");
+            };
+            location.reload();
+        };
+
+        ///////////////////////////////////////
+
+        window.onload = showNumbersMsg();
+        function showNumbersMsg() {
+            var Aname = !!localStorage.getItem("name") ? JSON.parse(localStorage.getItem("name")) : [];
+            var numbers = Aname.length;
+            document.getElementById("msg-numbers").innerHTML = numbers;
+        };
+
+        //////////////////////////////For small screen.
+
+        function sendNameM() {
+            var AnameM = !!localStorage.getItem("name") ? JSON.parse(localStorage.getItem("name")) : [];
+            var nameM = document.getElementById("nameCMobile").value;
+            AnameM.push(nameM);
+            localStorage.setItem("name", JSON.stringify(AnameM));
+        };
+        function sendPhoneM() {
+            var AphoneM = !!localStorage.getItem("phone") ? JSON.parse(localStorage.getItem("phone")) : [];
+            var phoneM = document.getElementById("telCMobile").value;
+            AphoneM.push(phoneM);
+            localStorage.setItem("phone", JSON.stringify(AphoneM));
+        };
+        function sendEmailM() {
+            var AemailM = !!localStorage.getItem("email") ? JSON.parse(localStorage.getItem("email")) : [];
+            var emailM = document.getElementById("emailCMobile").value;
+            AemailM.push(emailM);
+            localStorage.setItem("email", JSON.stringify(AemailM));
+        };
+        function sendMessageM() {
+            var AmsgM = !!localStorage.getItem("message") ? JSON.parse(localStorage.getItem("message")) : [];
+            var msgM = document.getElementById("textCMobile").value;
+            AmsgM.push(msgM);
+            localStorage.setItem("message", JSON.stringify(AmsgM));
+        };
+
+        ///////////////////////////////////////////////////////////
+
+        function showMsgM() {
+            var AnameM = !!localStorage.getItem("name") ? JSON.parse(localStorage.getItem("name")) : [];
+            var AphoneM = !!localStorage.getItem("phone") ? JSON.parse(localStorage.getItem("phone")) : [];
+            var AemailM = !!localStorage.getItem("email") ? JSON.parse(localStorage.getItem("email")) : [];
+            var AmsgM = !!localStorage.getItem("message") ? JSON.parse(localStorage.getItem("message")) : [];
+            var nameM = document.getElementById("nameCMobile").value;
+            var phoneM = document.getElementById("telCMobile").value;
+            var emailM = document.getElementById("emailCMobile").value;
+            var msgM = document.getElementById("textCMobile").value;
+            localStorage.setItem("name", JSON.stringify(AnameM));
+            localStorage.setItem("phone", JSON.stringify(AphoneM));
+            localStorage.setItem("email", JSON.stringify(AemailM));
+            localStorage.setItem("message", JSON.stringify(AmsgM));
+            document.getElementById("name-value").innerHTML = AnameM[0];
+            document.getElementById("phone-value").innerHTML = AphoneM[0];
+            document.getElementById("email-value").innerHTML = AemailM[0];
+            document.getElementById("msg-value").innerHTML = AmsgM[0]
+            if (AnameM[0] === undefined) {
+                localStorage.removeItem("name");
+                localStorage.removeItem("phone");
+                localStorage.removeItem("email");
+                localStorage.removeItem("message");
+                document.getElementById("msg-value").innerHTML = "Няма изпратени съобщения.";
+                document.getElementById("name-value").innerHTML = "";
+                document.getElementById("phone-value").innerHTML = "";
+                document.getElementById("email-value").innerHTML = "";
+            };
+        };
+
+        //////////////////////////////////////////////////////
+
+        function deleteMsgM() {
+            var AnameM = !!localStorage.getItem("name") ? JSON.parse(localStorage.getItem("name")) : [];
+            var AphoneM = !!localStorage.getItem("phone") ? JSON.parse(localStorage.getItem("phone")) : [];
+            var AemailM = !!localStorage.getItem("email") ? JSON.parse(localStorage.getItem("email")) : [];
+            var AmsgM = !!localStorage.getItem("message") ? JSON.parse(localStorage.getItem("message")) : [];
+            var nameM = document.getElementById("nameCMobile").value;
+            var phoneM = document.getElementById("telCMobile").value;
+            var emailM = document.getElementById("emailCMobile").value;
+            var msgM = document.getElementById("textCMobile").value;
+            AnameM.shift();
+            AphoneM.shift();
+            AemailM.shift();
+            AmsgM.shift();
+            localStorage.setItem("name", JSON.stringify(AnameM));
+            localStorage.setItem("phone", JSON.stringify(AphoneM));
+            localStorage.setItem("email", JSON.stringify(AemailM));
+            localStorage.setItem("message", JSON.stringify(AmsgM));
+            document.getElementById("name-value").innerHTML = "";
+            document.getElementById("phone-value").innerHTML = "";
+            document.getElementById("email-value").innerHTML = "";
+            document.getElementById("msg-value").innerHTML = "";
+            if (AnameM[0] === undefined) {
+                localStorage.removeItem("name");
+                localStorage.removeItem("phone");
+                localStorage.removeItem("email");
+                localStorage.removeItem("message");
+            };
+            location.reload();
+        };
+
+        //////////////////////////////////////////
+
+        window.onload = showNumbersMsgM();
+        function showNumbersMsgM() {
+            var AnameM = !!localStorage.getItem("name") ? JSON.parse(localStorage.getItem("name")) : [];
+            var numbersM = AnameM.length;
+            document.getElementById("msg-numbers").innerHTML = numbersM;
+        };
+    </script>
+</body>
+
+</html>

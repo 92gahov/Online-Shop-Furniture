@@ -1,0 +1,227 @@
+/*--------------------Styling video.------------------*/
+
+.videoCont {
+    width: 100%;
+    height: 360px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.video {
+    margin: auto;
+    display: block;
+}
+
+.heading {
+    font-family: 'Allerta Stencil';
+    position: absolute;
+    bottom: -150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.heading h1 {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/*-------------------Styling image bottom video.---------------------*/
+
+.imgBottomVideo {
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+
+.imgBottomVideo img {
+    border: 3px solid black;
+    border-radius: 6px;
+    box-shadow: 8px 8px 4px #aaaaaa;
+    max-width: 100%;
+}
+
+/*---------------------Styling section img left.-----------------*/
+
+.sectionFrontPage1 {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 28px;
+}
+
+.sectionImgLeft {
+    padding: 18px;
+    height: 362px;
+}
+
+.sectionImgLeft img {
+    border: 3px solid black;
+    border-radius: 14px;
+    transition: transform 0.6s;
+    box-shadow: 8px 8px 4px #aaaaaa;
+}
+
+.sectionImgLeft img:hover {
+    transform: scale(1.05);
+}
+
+/*-----------------------Styling contact.------------------*/
+
+.contact {
+    position: relative;
+    max-width: 800px;
+    font-family: 'Neuton';
+    height: 362px;
+    box-sizing: border-box;
+    margin-top: 14px;
+}
+
+.contact img {
+    vertical-align: middle;
+    border: 2px solid black;
+    box-shadow: 8px 8px 4px #aaaaaa;
+}
+
+.contact p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f1f1f1;
+    letter-spacing: 1px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: red;
+    letter-spacing: 2px;
+    margin-top: 4px;
+    font-weight: normal;
+}
+
+.contact a:hover {
+    letter-spacing: 3px;
+    text-decoration: underline;
+}
+
+.contact .contactCont {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/*------------------------Styling image with bed bottom page.-------------------*/
+
+.bedBottom {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 6px;
+    text-align: center;
+}
+
+.bedBottom img {
+    width: 400px;
+    height: 180px;
+    border: 3px solid black;
+    border-radius: 8px;
+    transition: width 0.8s;
+}
+
+.bedBottom img:hover {
+    width: 600px;
+    border: 3px solid black;
+}
+
+
+/*------------------------------------------------Media Query.------------------------------------------*/
+
+
+@media screen and (max-width: 600px) {
+    .videoCont {
+        width: 100%;
+        max-width: 1200px;
+        margin-top: 140px;
+        display: block;
+        position: relative;
+    }
+
+    .video {
+        width: 100%;
+        height: auto;
+    }
+
+    .heading h1 {
+        font-size: 20px;
+        margin-top: -270px;
+    }
+
+    /*-------------------------------------*/
+    .imgBottomVideo {
+        height: 294px;
+        margin-top: -120px;
+    }
+
+    .imgBottomVideo img {
+        width: 300px;
+        height: 280px;
+    }
+
+    /*--------------------------------*/
+    .sectionFrontPage1 {
+        display: block;
+    }
+
+    .sectionImgLeft {
+        display: none;
+    }
+
+    .contact {
+        text-align: center;
+        position: relative;
+        height: auto;
+    }
+
+    .contact img {
+        width: 360px;
+        height: 210px;
+    }
+
+    .contactCont {
+        max-width: 360px;
+        margin-left: 70px;
+        height: 126px;
+    }
+
+    .contactCont p {
+        font-size: 14px;
+    }
+
+    .contactCont a {
+        text-decoration: underline;
+    }
+
+    .contactCont a:hover {
+        cursor: default;
+        letter-spacing: 2px;
+    }
+
+    /*---------------------------------*/
+    .bedBottom img {
+        border: 2px solid black;
+        width: 320px;
+        height: 150px;
+        border-radius: 12px;
+        box-shadow: 8px 8px 4px #aaaaaa;
+    }
+
+    .bedBottom img:hover {
+        width: 320px;
+        border: 2px solid black;
+    }
+}

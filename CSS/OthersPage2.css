@@ -1,0 +1,227 @@
+/*----------------------Styling heading.-------------------*/
+
+.top-heading {
+    text-align: center;
+}
+
+.top-heading h1 {
+    font-family: 'Neuton';
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+/*----------------------Styling sorting buttons.--------------------*/
+
+.sort-main {
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.sort-cont-main {
+    position: absolute;
+    z-index: 1;
+}
+
+.sort-cont-main p {
+    font-family: 'Neuton';
+    font-size: 18px;
+}
+
+.sort-h {
+    border: 2px solid black;
+    width: 240px;
+    text-align: left;
+    padding-left: 8px;
+    position: relative;
+    background-color: #dcdcde;
+}
+
+.sort-h:hover {
+    cursor: pointer;
+    background-color: #c3c4c7;
+}
+
+.sort-h span {
+    position: absolute;
+    right: 12px;
+}
+
+.sort-cont {
+    text-align: center;
+    padding: 4px 0;
+    height: 0;
+    overflow-y: hidden;
+    transition: 0.8s;
+    background-color: #dcdcde;
+    box-sizing: border-box;
+    padding: 0;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.size-down:hover, .size-up:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.price-down:hover, .price-up:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/*------------------Styling others container.------------------*/
+
+.others-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+    padding: 10px 34px;
+    grid-column-gap: 20px;
+    grid-row-gap: 42px;
+    margin-top: 90px;
+}
+
+.others {
+    border: 3px solid black;
+    border-radius: 16px;
+    width: 260px;
+    padding: 14px;
+    text-align: center;
+    font-family: 'Neuton';
+    background-image: linear-gradient(45deg, #f0f0f1, #dcdcde, #c3c4c7, #a7aaad);
+}
+
+.others:hover>img {
+    transform: scaleX(-1);
+}
+
+.others img {
+    border: 3px solid black;
+    border-radius: 16px;
+    transition: 0.6s;
+}
+
+.others p {
+    font-size: 22px;
+    margin: 2px;
+}
+
+.others h3 {
+    margin: 2px;
+}
+
+.others button {
+    font-size: 20px;
+    padding: 6px;
+    border: none;
+    border-radius: 8px;
+    width: 80px;
+    background-color: red;
+    color: white;
+    margin-top: 4px;
+}
+
+.others button:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+/*---------------------Styling page numbers.------------------*/
+
+.page-number {
+    text-align: center;
+    margin-top: 26px;
+    margin-bottom: 30px;
+}
+
+.page-number a {
+    text-decoration: none;
+    font-size: 26px;
+    padding: 8px 16px;
+    color: black;
+    margin: 0 10px;
+}
+
+.page-number a.active {
+    background-color: black;
+    border-radius: 6px;
+    color: white;
+}
+
+.page-number a:hover:not(.active) {
+    background-color: #a7aaad;
+    border-radius: 6px;
+}
+
+/*------------------------------------Media Query-----------------------------*/
+
+@media screen and (max-width: 600px) {
+    .others-container {
+        display: block;
+    }
+
+    .others {
+        margin: 0 auto;
+    }
+
+    .others:nth-child(2) {
+        margin-top: 18px;
+    }
+
+    .others:nth-child(3) {
+        margin-top: 18px;
+    }
+
+    .others:nth-child(4) {
+        margin-top: 18px;
+    }
+
+    .others:nth-child(5) {
+        margin-top: 18px;
+    }
+
+    .others:nth-child(6) {
+        margin-top: 18px;
+    }
+
+    .top-heading {
+        margin-top: 120px;
+    }
+
+    .sort-h:hover {
+        cursor: default;
+        background-color: #dcdcde;
+    }
+
+    .size-down:hover, .size-up:hover {
+        cursor: default;
+        font-weight: normal;
+    }
+
+    .price-down:hover, .price-up:hover {
+        cursor: default;
+        font-weight: normal;
+    }
+
+    .others:hover>img {
+        transform: none;
+    }
+
+    .others button:hover {
+        background-color: red;
+        cursor: default;
+    }
+
+    .page-number a:hover {
+        cursor: default;
+    }
+
+    .page-number a:hover:not(.active) {
+        background-color: transparent;
+    }
+
+    .page-number a {
+        margin: 0 6px;
+    }
+}

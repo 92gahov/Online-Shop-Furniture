@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Furniture">
+    <meta name="keywords" content="furniture, wardrobre, bed, table, showcase, others">
+    <meta name="author" content="Georgi Gahov">
+    <title>Gahov Furniture - Доставка и плащане</title>
+    <style>
+        body {
+            background: url("Image/background.jpg") repeat;
+        }
+    </style>
+    <link rel="stylesheet" href="CSS/HeaderAndFooter.css">
+    <link rel="stylesheet" href="CSS/Delivery.css">
+    <link href='https://fonts.googleapis.com/css?family=Neuton' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+</head>
+
+<body id="body">
+    <header>
+        <div class="mobileLogo"><a href="FrontPage.html">Gahov
+                Furniture</a></div>
+        <div class="header">
+            <div class="imgCont">
+                <a href="FrontPage.html">
+                    <img src="Image/furn.jpg" width="160" height="160">
+                </a>
+            </div>
+
+            <div class="SgCont">
+                <div class="mainSearch">
+                    <form>
+                        <input type="text" id="main-search" onkeyup="getSearching()" required placeholder="Търсене..."
+                            autocomplete="off"><br>
+                        <input class="mSbtn" type="button" onclick="search()" value="Търси">
+                    </form>
+                </div>
+                <ul class="main-search-cont" id="main-search-cont">
+                    <li><a href="OthersPage4.html">Бюра</a></li>
+                    <li><a href="OthersPage4.html">Бюро</a></li>
+                    <li><a href="ShowcasePage1.html">Витрина</a></li>
+                    <li><a href="ShowcasePage1.html">Витрини</a></li>
+                    <li><a href="OthersPage3.html">Врата</a></li>
+                    <li><a href="OthersPage3.html">Врати</a></li>
+                    <li><a href="WardrobePage1.html">Гардероб</a></li>
+                    <li><a href="WardrobePage1.html">Гардероби</a></li>
+                    <li><a href="OthersPage1.html">Детско легло</a></li>
+                    <li><a href="OthersPage1.html">Други</a></li>
+                    <li><a href="OthersPage2.html">Етажерка за стена</a></li>
+                    <li><a href="OthersPage6.html">Кухни</a></li>
+                    <li><a href="OthersPage6.html">Кухня</a></li>
+                    <li><a href="OthersPage3.html">Ламперия</a></li>
+                    <li><a href="OthersPage1.html">Малка библиотека</a></li>
+                    <li><a href="TablePage1.html">Маса</a></li>
+                    <li><a href="TablePage1.html">Маси</a></li>
+                    <li><a href="BedsPage1.html">Спални</a></li>
+                    <li><a href="BedsPage1.html">Спалня</a></li>
+                    <li><a href="OthersPage2.html">ТВ секция</a></li>
+                    <li><a href="OthersPage1.html">ТВ шкаф</a></li>
+                    <li><a href="OthersPage2.html">Тоалетка</a></li>
+                    <li><a href="OthersPage1.html">Шкаф</a></li>
+                </ul>
+                <div class="greetings">
+                    <p id="idGreetings"></p>
+                </div>
+            </div>
+
+            <div class="profile">
+                <div class="profileImg" id="profileImg">
+                    <img src="Image/profile logo.png" title="Профил" width="46" height="46">
+                </div>
+                <div class="profileName" id="profileName">
+                    <p id="idprofileName"></p>
+                </div>
+                <div class="eBtn">
+                    <input type="button" id="eBtn"
+                        onclick="document.getElementById('iddivForm1').style.display = 'block'" value="Вход">
+                </div>
+                <div class="exBtn" id="exBtn">
+                    <input type="button" id="idexBtn" value="Изход">
+                </div>
+                <div class="divForm1" id="iddivForm1">
+                    <form name="form1" id="form1" class="form1" method="post" action="#">
+                        <label for="uname" id="unameL">Потребител:</label>
+                        <span id="closeForm" class="closeForm">&times;</span><br>
+                        <input type="text" id="uname" name="uname" placeholder="Потребител..." autocomplete="off"
+                            required><br>
+                        <label for="psw" id="pswL">Парола:</label><br>
+                        <input type="password" id="psw" name="psw" placeholder="Парола..." autocomplete="off"
+                            required><br>
+                        <div class="eye"><img onclick="showPsw()" src="Image/eye icon.png" width="30" height="18"
+                                title="Покажи парола"></div>
+                        <span class="wrong" id="wrong"></span><br>
+                        <input type="checkbox"> Запомни ме!<br>
+                        <input type="submit" value="Вход"><br>
+                        <input type="button" id="reg" value="Регистрация" onclick="goToRegister()"><br>
+                        <a class="forgotpsw" href="Forgotten_password.html">Забравена
+                            парола?</a>
+                    </form>
+                </div>
+                <div class="loading" id="loading"></div>
+            </div>
+
+            <div class="LSC">
+                <div class="linksMobile">
+                    <span class="openNavMobile" id="openNav" onclick="openNav()">&#9776;</span>
+                </div>
+                <div class="searchMobile">
+                    <button id="searchButtonMobileUp"
+                        onclick="document.getElementById('mainSearchMobileCont').style.display = 'block'">Търси</button>
+                </div>
+                <div class="cart">
+                    <div class="cartImg">
+                        <img src="Image/cart logo.png" title="Количка" width="46" height="46">
+                    </div>
+                    <div class="cartName">
+                        <a href="Cart.html">Количка <span>0</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="modalShadow" id="modalShadow">
+        <div class="questionFrame" id="questionFrame">
+            <div class="closeQuestion">
+                <button id="closeQuestion">&times;</button>
+            </div>
+            <div class="question">
+                <div class="questionCont">
+                    <div>
+                        <img src="Image/attention.png" width="60" height="60">
+                    </div>
+                    <div>
+                        <div class="paragraph">
+                            <p>Сигурни ли сте, че искате да напуснете профила си?</p>
+                        </div>
+                        <div class="answers">
+                            <button id="answerYes">Да</button>
+                            <button id="answerNo">Не</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navLinksDesctop" id="navLinksDesctop">
+        <a href="WardrobePage1.html">Гардероби</a>
+        <a href="TablePage1.html">Маси</a>
+        <a href="BedsPage1.html">Спални</a>
+        <a href="ShowcasePage1.html">Витрини</a>
+        <a href="OthersPage1.html">Други</a>
+    </nav>
+
+    <div class="mainSearchMobileCont" id="mainSearchMobileCont">
+        <input type="text" id="searchFieldMobile" onkeyup="getSearchingM()" autocomplete="off" required
+            placeholder="Търсене..."><br>
+        <button id="searchButtonMobile" onclick="searchM()">Търси</button>
+    </div>
+    <ul class="main-search-cont-m" id="main-search-cont-m">
+        <li><a href="OthersPage4.html">Бюра</a></li>
+        <li><a href="OthersPage4.html">Бюро</a></li>
+        <li><a href="ShowcasePage1.html">Витрина</a></li>
+        <li><a href="ShowcasePage1.html">Витрини</a></li>
+        <li><a href="OthersPage3.html">Врата</a></li>
+        <li><a href="OthersPage3.html">Врати</a></li>
+        <li><a href="WardrobePage1.html">Гардероб</a></li>
+        <li><a href="WardrobePage1.html">Гардероби</a></li>
+        <li><a href="OthersPage1.html">Детско легло</a></li>
+        <li><a href="OthersPage1.html">Други</a></li>
+        <li><a href="OthersPage2.html">Етажерка за стена</a></li>
+        <li><a href="OthersPage6.html">Кухни</a></li>
+        <li><a href="OthersPage6.html">Кухня</a></li>
+        <li><a href="OthersPage3.html">Ламперия</a></li>
+        <li><a href="OthersPage1.html">Малка библиотека</a></li>
+        <li><a href="TablePage1.html">Маса</a></li>
+        <li><a href="TablePage1.html">Маси</a></li>
+        <li><a href="BedsPage1.html">Спални</a></li>
+        <li><a href="BedsPage1.html">Спалня</a></li>
+        <li><a href="OthersPage2.html">ТВ секция</a></li>
+        <li><a href="OthersPage1.html">ТВ шкаф</a></li>
+        <li><a href="OthersPage2.html">Тоалетка</a></li>
+        <li><a href="OthersPage1.html">Шкаф</a></li>
+    </ul>
+
+    <div id="idnavMobileCont" class="navMobileCont">
+        <nav>
+            <span id="closeNav" class="closeNav">&times;</span>
+            <a href="WardrobePage1.html">Гардероби</a>
+            <a href="TablePage1.html">Маси</a>
+            <a href="BedsPage1.html">Спални</a>
+            <a href="ShowcasePage1.html">Витрини</a>
+            <a href="OthersPage1.html">Други</a>
+        </nav>
+    </div>
+
+    <!--------------------------End header.----------------------->
+
+    <section class="delivery-main">
+        <h2>Условия на доставка</h2>
+        <div class="delivery-f">
+            <div class="delivery-f-img">
+                <img src="Image/delivery1.png" width="220" height="220">
+            </div>
+            <div class="delivery-f-txt">
+                <h3>Условия и начини на доставка</h3>
+                <p><strong>Безплатна доставка</strong></p>
+                <p>- за поръчки на стойност над 600 лв.</p>
+                <p><strong>Платена доставка 9.90 лв</strong></p>
+                <p>- за поръчки на стойност под 600 лв.</p>
+                <p><strong>Начини на доставка</strong></p>
+                <p>- до адрес на клиента - доставка с куриер до всяка точка в България.</p>
+                <p><strong>Стоките се доставят на получателите до входа на сградата.</strong></p>
+                <p>- до офис на ЕКОНТ или СПИДИ - доставка до офис на куриерска компания.</p>
+                <p><strong>ВАЖНО:</strong> Всички мебели се изпращат с опция <strong>ПРЕГЛЕД</strong>.Клиентът е
+                    длъжен да провери пратката си преди да я приеме <strong>В ПРИСЪСТВИЕТО</strong> на куриер.Gahov
+                    Furniture не носи отговорност за приети от клиента мебели с транспортни дефекти.</p>
+            </div>
+        </div>
+        <div class="delivery-s">
+            <div class="delivery-s-txt">
+                <h3>Опции за доставка</h3>
+                <p>
+                    Всички продукти присъстващи в сайта се доставят на територията на цялата страна в <strong>най-кратки
+                        срокове.</strong> За целта имаме изградени партньорски отношения с куриерски фирми
+                    <strong>ЕКОНТ, СПИДИ </strong>и<strong> ТРАНСПРЕС</strong>, както и <strong>СОБСТВЕН
+                        ТРАНСПОРТ</strong> за София-град. Клиентът може да избере начина на доставка: до най-близкия
+                    офис на куриера или до посочен от него адрес.
+                </p>
+                <br>
+                <p>Срокът на доставка е от <strong>2 до 5 работни дни</strong> в случаите, когато продуктът е наличен в
+                    нашия склад. Продуктите се изпращат след потвърждаване на поръчкате по имейл или телефон. </p>
+            </div>
+            <div class="delivery-s-img">
+                <img src="Image/delivery3.png" width="280" height="220">
+            </div>
+        </div>
+    </section>
+
+    <section class="payment-main">
+        <h2>Начини на плащане</h2>
+        <div class="payment-f">
+            <div class="payment-f-img">
+                <img src="Image/pngfind.com-raining-money-png-317911.png" width="180" height="180">
+            </div>
+            <div class="payment-f-txt">
+                <h3>Плащане в брой</h3>
+                <p>В брой може да заплатите във всеки наш офис.</p>
+                <p>В брой се осъществява и плащането при онлайн поръчка, когато е избран начин на получаване: Плащане с
+                    наложен платеж. Сумата се заплаща на куриера след проверка на получената стока.</p>
+            </div>
+        </div>
+        <div class="payment-s">
+            <div class="payment-s-txt">
+                <h3>Плащане онлайн с банкова карта</h3>
+                <p>Може да направите плащане през нашия сайт със следните банкови карти: MasterCard, MasterCard
+                    Electronic, Maestro, Visa, Visa Electron и V PAY.</p>
+                <p>Транзакционната валута при плащане с карта е български лев (лв.)</p>
+                <p>- Моля, обърнете внимание, че вашата V PAY или MasterCard Electronic карта ще се приеме само, ако е
+                    регистрирана за участие в схемите за онлайн автентикация Verified by Visa или MasterCard SecureCode.
+                </p>
+                <p>- Моля проверете също така, дали вашата карта е отворена от вашия издател за транзакции в Интернет.
+                </p>
+                <p>- Максималната сума за транзакция е 10 000 лева.</p>
+                <p>Данни, които клиентът трябва да попълни при плащане с карта:</p>
+                <p>- Данни за картата (номер, дата на валидност, 3-цифрен код за сигурност, име на картодържателя)</p>
+                <p>- Данни за автентикация: За идентифицирането ви като картодържател, платежният сървър за електронна
+                    търговия на обслужващата ни банка поддържа схемите за автентикация на международните картови
+                    организации.</p>
+                <p>- Verified by VISA и MasterCard SecureCode. В случай, че сте регистрирани от Вашата банка Издател в
+                    тези схеми за сигурност, на екрана ви ще се появи страница, където трябва да въведете вашата
+                    автентикационна парола.</p>
+                <p>Ако транзакция е успешна ще бъдете прехвърлени към страница с подробно описание на Вашата поръчка и
+                    текст "Вашата поръчка беше приета успешно" в противен случай, ще видите съобщение за грешка.</p>
+            </div>
+            <div class="payment-s-img">
+                <img src="Image/PngItem_537954.png" width="260" height="260">
+            </div>
+        </div>
+        <div class="payment-t">
+            <div class="payment-t-img">
+                <img src="Image/PinClipart.com_credit-card-machine-clipart_1976825.png" width="180" height="240">
+            </div>
+            <div class="payment-t-txt">
+                <h3>Плащане с ПОС терминал</h3>
+                <p>Всички наши магазини са оборудвани с ПОС терминали и приемат плащания с дебитни и кредитни карти:</p>
+                <br>
+                <p>- MasterCard,</p>
+                <br>
+                <p>- MasterCard Electronic,</p>
+                <br>
+                <p>- Maestro,</p>
+                <br>
+                <p>- Visa,</p>
+                <br>
+                <p>- Visa Electron</p>
+                <br>
+                <p>- V PAY.</p>
+                <div class="payment-t-img2">
+                    <img src="Image/—Pngtree—cartoon pos machine icon download_4440245.png" width="220" height="220">
+                </div>
+            </div>
+        </div>
+        <div class="payment-ff">
+            <div class="payment-ff-txt">
+                <h3>Плащане по банков път</h3>
+                <p>Може да заплатите избраните продукти по банков път. Ако посетите наш офис ще Ви бъде издадена
+                    проформа фактура по която може да осъществите банковия превод. Може да получите проформа фактура и
+                    по имейл, ако нямате възможност да ни посетите. Получаването на стоката се осъществява след
+                    отразяване на банковия превод в нашата сметка или при предоставяне на платежно нареждане от страна
+                    на клиента.</p>
+                <p>При направена поръчка през сайта получавате Инструкции за банков превод, както следва:</p>
+                <p>Получател: "Гахов Фърничър" ООД</p>
+                <p>Банка: ********* ******* АД</p>
+                <p>IBAN: BG********************</p>
+                <p>BIC: ********</p>
+                <p>За основание напишете номера на поръчката.
+                    Поръчаната стока ще бъде изпратена след отразяване на парите по нашата сметка или изпращане на имейл
+                    с платежно нареждане на sfumac@abv.bg.</p>
+            </div>
+            <div class="payment-ff-img">
+                <img src="Image/PngItem_1531127.png" width="240" height="260">
+            </div>
+        </div>
+    </section>
+
+    <!-------------------Start footer.----------------->
+
+    <div class="footerDesctop">
+        <div>
+            <a href="FrontPage.html">Начало</a>
+        </div>
+        <div>
+            <a href="AboutUs.html">За нас</a>
+        </div>
+        <div>
+            <a href="Blog.html">Блог</a>
+        </div>
+        <div>
+            <a href="Gallery.html">Галерия</a>
+        </div>
+        <div>
+            <a href="Contact.html">Контакти</a>
+        </div>
+    </div>
+
+    <div class="footer-end-main">
+        <div class="footer-end">
+            <div class="footer-copy">
+                <p>Copyright&#169; 2022 &nbsp;&nbsp;<span style="font-weight: bold;">|</span>&nbsp;&nbsp; All rights
+                    reserved</p>
+            </div>
+            <div class="author">
+                <p>Created By <a href="#">G. Gahov</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footerMobileLinks" id="footerMobileLinks">
+        <a href="FrontPage.html">Начало</a><br>
+        <a href="AboutUs.html">За нас</a><br>
+        <a href="Blog.html">Блог</a><br>
+        <a href="Gallery.html">Галерия</a><br>
+        <a href="Contact.html">Контакти</a>
+        <div class="footer-end-main-s">
+            <p>Copyright&#169; 2022 &nbsp;&nbsp;<span style="font-weight: bold;">|</span>&nbsp;&nbsp; All rights
+                reserved</p>
+            <p>Created By <a href="#" style="display: inline; font-size: 18px; text-decoration: underline;">G. Gahov</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="footerMobileMain">
+        <div class="footerMobileButtonMain" id="footerMobileButtonMain">
+            <div class="footerMobileButton" id="footerMobileButton" onclick="classList.toggle('change')">
+                <div class="divFooter1"></div>
+                <div class="divFooter2"></div>
+                <div class="divFooter3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------Scripts.------------------>
+
+    <script src="JS/HeaderAndFooter.js"></script>
+</body>
+
+</html>

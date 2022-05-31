@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Furniture">
+    <meta name="keywords" content="furniture, wardrobre, bed, table, showcase, others">
+    <meta name="author" content="Georgi Gahov">
+    <link href='https://fonts.googleapis.com/css?family=Neuton' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+    <link rel="stylesheet" href="CSS/HeaderAndFooter.css">
+    <link rel="stylesheet" href="CSS/OthersPage2.css">
+    <title>Gahov Furniture - Други</title>
+    <style>
+        body {
+            background: url("Image/background.jpg") repeat;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <header>
+        <div class="mobileLogo"><a href="FrontPage.html">Gahov
+                Furniture</a></div>
+        <div class="header">
+            <div class="imgCont">
+                <a href="FrontPage.html">
+                    <img src="Image/furn.jpg" width="160" height="160">
+                </a>
+            </div>
+
+            <div class="SgCont">
+                <div class="mainSearch">
+                    <form method="post" action="#">
+                        <input type="text" id="main-search" onkeyup="getSearching()" required placeholder="Търсене..."
+                            autocomplete="off"><br>
+                        <input class="mSbtn" type="button" onclick="search()" value="Търси">
+                    </form>
+                </div>
+                <ul class="main-search-cont" id="main-search-cont">
+                    <li><a href="OthersPage4.html">Бюра</a></li>
+                    <li><a href="OthersPage4.html">Бюро</a></li>
+                    <li><a href="ShowcasePage1.html">Витрина</a></li>
+                    <li><a href="ShowcasePage1.html">Витрини</a></li>
+                    <li><a href="OthersPage3.html">Врата</a></li>
+                    <li><a href="OthersPage3.html">Врати</a></li>
+                    <li><a href="WardrobePage1.html">Гардероб</a></li>
+                    <li><a href="WardrobePage1.html">Гардероби</a></li>
+                    <li><a href="OthersPage1.html">Детско легло</a></li>
+                    <li><a href="OthersPage1.html">Други</a></li>
+                    <li><a href="OthersPage2.html">Етажерка за стена</a></li>
+                    <li><a href="OthersPage6.html">Кухни</a></li>
+                    <li><a href="OthersPage6.html">Кухня</a></li>
+                    <li><a href="OthersPage3.html">Ламперия</a></li>
+                    <li><a href="OthersPage1.html">Малка библиотека</a></li>
+                    <li><a href="TablePage1.html">Маса</a></li>
+                    <li><a href="TablePage1.html">Маси</a></li>
+                    <li><a href="BedsPage1.html">Спални</a></li>
+                    <li><a href="BedsPage1.html">Спалня</a></li>
+                    <li><a href="OthersPage2.html">ТВ секция</a></li>
+                    <li><a href="OthersPage1.html">ТВ шкаф</a></li>
+                    <li><a href="OthersPage2.html">Тоалетка</a></li>
+                    <li><a href="OthersPage1.html">Шкаф</a></li>
+                </ul>
+                <div class="greetings">
+                    <p id="idGreetings"></p>
+                </div>
+            </div>
+
+            <div class="profile">
+                <div class="profileImg" id="profileImg">
+                    <img src="Image/profile logo.png" title="Профил" width="46" height="46">
+                </div>
+                <div class="profileName" id="profileName">
+                    <p id="idprofileName"></p>
+                </div>
+                <div class="eBtn">
+                    <input type="button" id="eBtn"
+                        onclick="document.getElementById('iddivForm1').style.display = 'block'" value="Вход">
+                </div>
+                <div class="exBtn" id="exBtn">
+                    <input type="button" id="idexBtn" value="Изход">
+                </div>
+                <div class="divForm1" id="iddivForm1">
+                    <form name="form1" id="form1" class="form1" method="post" action="#">
+                        <label for="uname" id="unameL">Потребител:</label>
+                        <span id="closeForm" class="closeForm">&times;</span><br>
+                        <input type="text" id="uname" name="uname" placeholder="Потребител..." autocomplete="off"
+                            required><br>
+                        <label for="psw" id="pswL">Парола:</label><br>
+                        <input type="password" id="psw" name="psw" placeholder="Парола..." autocomplete="off"
+                            required><br>
+                        <div class="eye"><img onclick="showPsw()" src="Image/eye icon.png" width="30" height="18"
+                                title="Покажи парола"></div>
+                        <span class="wrong" id="wrong"></span><br>
+                        <input type="checkbox"> Запомни ме!<br>
+                        <input type="submit" value="Вход"><br>
+                        <input type="button" id="reg" value="Регистрация" onclick="goToRegister()"><br>
+                        <a class="forgotpsw" href="Forgotten_password.html">Забравена
+                            парола?</a>
+                    </form>
+                </div>
+                <div class="loading" id="loading"></div>
+            </div>
+
+            <div class="LSC">
+                <div class="linksMobile">
+                    <span class="openNavMobile" id="openNav" onclick="openNav()">&#9776;</span>
+                </div>
+                <div class="searchMobile">
+                    <button id="searchButtonMobileUp"
+                        onclick="document.getElementById('mainSearchMobileCont').style.display = 'block'">Търси</button>
+                </div>
+                <div class="cart">
+                    <div class="cartImg">
+                        <img src="Image/cart logo.png" title="Количка" width="46" height="46">
+                    </div>
+                    <div class="cartName">
+                        <a href="Cart.html">Количка <span>0</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="modalShadow" id="modalShadow">
+        <div class="questionFrame" id="questionFrame">
+            <div class="closeQuestion">
+                <button id="closeQuestion">&times;</button>
+            </div>
+            <div class="question">
+                <div class="questionCont">
+                    <div>
+                        <img src="Image/attention.png" width="60" height="60">
+                    </div>
+                    <div>
+                        <div class="paragraph">
+                            <p>Сигурни ли сте, че искате да напуснете профила си?</p>
+                        </div>
+                        <div class="answers">
+                            <button id="answerYes">Да</button>
+                            <button id="answerNo">Не</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navLinksDesctop" id="navLinksDesctop">
+        <a href="WardrobePage1.html">Гардероби</a>
+        <a href="TablePage1.html">Маси</a>
+        <a href="BedsPage1.html">Спални</a>
+        <a href="ShowcasePage1.html">Витрини</a>
+        <a href="OthersPage1.html">Други</a>
+    </nav>
+
+    <div class="mainSearchMobileCont" id="mainSearchMobileCont">
+        <input type="text" id="searchFieldMobile" onkeyup="getSearchingM()" autocomplete="off" required
+            placeholder="Търсене..."><br>
+        <button id="searchButtonMobile" onclick="searchM()">Търси</button>
+    </div>
+    <ul class="main-search-cont-m" id="main-search-cont-m">
+        <li><a href="OthersPage4.html">Бюра</a></li>
+        <li><a href="OthersPage4.html">Бюро</a></li>
+        <li><a href="ShowcasePage1.html">Витрина</a></li>
+        <li><a href="ShowcasePage1.html">Витрини</a></li>
+        <li><a href="OthersPage3.html">Врата</a></li>
+        <li><a href="OthersPage3.html">Врати</a></li>
+        <li><a href="WardrobePage1.html">Гардероб</a></li>
+        <li><a href="WardrobePage1.html">Гардероби</a></li>
+        <li><a href="OthersPage1.html">Детско легло</a></li>
+        <li><a href="OthersPage1.html">Други</a></li>
+        <li><a href="OthersPage2.html">Етажерка за стена</a></li>
+        <li><a href="OthersPage6.html">Кухни</a></li>
+        <li><a href="OthersPage6.html">Кухня</a></li>
+        <li><a href="OthersPage3.html">Ламперия</a></li>
+        <li><a href="OthersPage1.html">Малка библиотека</a></li>
+        <li><a href="TablePage1.html">Маса</a></li>
+        <li><a href="TablePage1.html">Маси</a></li>
+        <li><a href="BedsPage1.html">Спални</a></li>
+        <li><a href="BedsPage1.html">Спалня</a></li>
+        <li><a href="OthersPage2.html">ТВ секция</a></li>
+        <li><a href="OthersPage1.html">ТВ шкаф</a></li>
+        <li><a href="OthersPage2.html">Тоалетка</a></li>
+        <li><a href="OthersPage1.html">Шкаф</a></li>
+    </ul>
+
+    <div id="idnavMobileCont" class="navMobileCont">
+        <nav>
+            <span id="closeNav" class="closeNav">&times;</span>
+            <a href="WardrobePage1.html">Гардероби</a>
+            <a href="TablePage1.html">Маси</a>
+            <a href="BedsPage1.html">Спални</a>
+            <a href="ShowcasePage1.html">Витрини</a>
+            <a href="OthersPage1.html">Други</a>
+        </nav>
+    </div>
+
+    <!-----------------End header.-------------->
+
+    <div class="top-heading">
+        <h1>Други</h1>
+    </div>
+
+    <section class="sort-main">
+        <div class="sort-cont-main">
+            <div class="sort-h" id="sort-h">
+                <p>Подреди по:<span>&#x25BC;</span></p>
+            </div>
+            <div class="sort-cont" id="sort-cont">
+                <div class="size-up" onclick="nameToZ()">
+                    <p>Име А-Я</p>
+                </div>
+                <div class="size-down" onclick="nameToA()">
+                    <p>Име Я-А</p>
+                </div>
+                <div class="price-up" onclick="priceToUp()">
+                    <p>Най-ниска цена</p>
+                </div>
+                <div class="price-down" onclick="priceToDown()">
+                    <p>Най-висока цена</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="others-container" id="container">
+        <div class="others" data-price="145.20" data-name="a">
+            <img src="Imgs/other7.jpg" width="220" height="260">
+            <h3>Етажерка за стена</h3>
+            <p>145<sup>20</sup>лв.</p>
+            <button type="button" class="add-cart cart1">Купи</button>
+        </div>
+        <div class="others" data-price="460.20" data-name="b">
+            <img src="Imgs/other8.jpg" width="220" height="260">
+            <h3>ТВ секция</h3>
+            <p>460<sup>20</sup>лв.</p>
+            <button type="button" class="add-cart cart2">Купи</button>
+        </div>
+        <div class="others" data-price="265.90" data-name="c">
+            <img src="Imgs/other9.jpg" width="220" height="260">
+            <h3>Тоалетка</h3>
+            <p>265<sup>90</sup>лв.</p>
+            <button type="button" class="add-cart cart3">Купи</button>
+        </div>
+        <div class="others" data-price="239.40" data-name="c">
+            <img src="Imgs/other10.jpg" width="220" height="260">
+            <h3>Тоалетка</h3>
+            <p>239<sup>40</sup>лв.</p>
+            <button type="button" class="add-cart cart4">Купи</button>
+        </div>
+        <div class="others" data-price="199.80" data-name="c">
+            <img src="Imgs/other11.jpg" width="220" height="260">
+            <h3>Тоалетка</h3>
+            <p>199<sup>80</sup>лв.</p>
+            <button type="button" class="add-cart cart5">Купи</button>
+        </div>
+        <div class="others" data-price="305.80" data-name="c">
+            <img src="Imgs/other12.jpg" width="220" height="260">
+            <h3>Тоалетка</h3>
+            <p>305<sup>80</sup>лв.</p>
+            <button type="button" class="add-cart cart6">Купи</button>
+        </div>
+    </section>
+
+    <div class="page-number">
+        <a href="OthersPage1.html">&laquo;</a>
+        <a href="OthersPage1.html">1</a>
+        <a href="OthersPage2.html" class="active">2</a>
+        <a href="OthersPage3.html">3</a>
+        <a href="OthersPage4.html">4</a>
+        <a href="OthersPage5.html">5</a>
+        <a href="OthersPage6.html">6</a>
+        <a href="OthersPage3.html">&raquo;</a>
+    </div>
+
+    <!--------------------Footer.---------------->
+
+    <div class="footerDesctop">
+        <div>
+            <a href="FrontPage.html">Начало</a>
+        </div>
+        <div>
+            <a href="AboutUs.html">За нас</a>
+        </div>
+        <div>
+            <a href="Blog.html">Блог</a>
+        </div>
+        <div>
+            <a href="Gallery.html">Галерия</a>
+        </div>
+        <div>
+            <a href="Contact.html">Контакти</a>
+        </div>
+    </div>
+
+    <div class="footer-end-main">
+        <div class="footer-end">
+            <div class="footer-copy">
+                <p>Copyright&#169; 2022 &nbsp;&nbsp;<span style="font-weight: bold;">|</span>&nbsp;&nbsp; All rights
+                    reserved</p>
+            </div>
+            <div class="author">
+                <p>Created By <a href="#">G. Gahov</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footerMobileLinks" id="footerMobileLinks">
+        <a href="FrontPage.html">Начало</a><br>
+        <a href="AboutUs.html">За нас</a><br>
+        <a href="Blog.html">Блог</a><br>
+        <a href="Gallery.html">Галерия</a><br>
+        <a href="Contact.html">Контакти</a>
+        <div class="footer-end-main-s">
+            <p>Copyright&#169; 2022 &nbsp;&nbsp;<span style="font-weight: bold;">|</span>&nbsp;&nbsp; All rights
+                reserved</p>
+            <p>Created By <a href="#" style="display: inline; font-size: 18px; text-decoration: underline;">G. Gahov</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="footerMobileMain">
+        <div class="footerMobileButtonMain" id="footerMobileButtonMain">
+            <div class="footerMobileButton" id="footerMobileButton" onclick="classList.toggle('change')">
+                <div class="divFooter1"></div>
+                <div class="divFooter2"></div>
+                <div class="divFooter3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------Scripts.--------------->
+
+    <script src="JS/HeaderAndFooter.js"></script>
+    <script src="JS/Products2.js"></script>
+    <script src="JS/OthersPage2.js"></script>
+</body>
+
+</html>

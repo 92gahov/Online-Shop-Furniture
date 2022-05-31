@@ -1,0 +1,280 @@
+/*---------------------Styling blogs.-----------------*/
+
+.divBlogMain1 {
+    margin-top: 28px;
+    border-bottom: 3px solid black;
+}
+
+.divBlogMain {
+    margin-top: 28px;
+    border-bottom: 3px solid black;
+}
+
+.divBlogHeading {
+    text-align: center;
+}
+
+.divBlogHeading h2 {
+    font-family: 'Neuton';
+    text-shadow: 2px 2px 5px red;
+}
+
+.divBlogContain {
+    display: flex;
+    justify-content: space-around;
+}
+
+.divBlogP {
+    padding: 12px;
+}
+
+.divBlogP p {
+    font-family: 'Neuton';
+    font-size: 20px;
+}
+
+.divBlogImg {
+    padding: 16px;
+    padding-top: 170px;
+}
+
+.divBlogImg img {
+    border: 2px solid black;
+    border-radius: 18px;
+}
+
+.divBlogMain h4 {
+    font-family: 'Neuton';
+    text-indent: 30px;
+    font-size: 26px;
+}
+
+/*----------------------------*/
+
+.divBlogMainEnd {
+    margin-top: 28px;
+}
+
+.divBlogHeadingEnd {
+    text-align: center;
+}
+
+.divBlogHeadingEnd h2 {
+    font-family: 'Neuton';
+    text-shadow: 2px 2px 5px red;
+}
+
+.divBlogContainEnd {
+    display: flex;
+    justify-content: space-around;
+}
+
+.divBlogPEnd {
+    padding: 12px;
+}
+
+.divBlogPEnd p {
+    font-family: 'Neuton';
+    font-size: 20px;
+}
+
+.divBlogImgEnd {
+    padding: 16px;
+    padding-top: 170px;
+}
+
+.divBlogImgEnd img {
+    border: 2px solid black;
+    border-radius: 18px;
+}
+
+.divBlogMainEnd h4 {
+    font-family: 'Neuton';
+    text-indent: 30px;
+    font-size: 26px;
+}
+
+/*----------------------------------------------------------------*/
+
+#readMore {
+    color: blue;
+    font-weight: bold;
+}
+
+#readMore:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#moreTxt {
+    display: none;
+}
+
+/*------------------------------*/
+#readMore2 {
+    color: blue;
+    font-weight: bold;
+}
+
+#readMore2:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#moreTxt2 {
+    display: none;
+}
+
+/*---------------------------------*/
+#readMore3 {
+    color: blue;
+    font-weight: bold;
+    font-size: 20px;
+    text-indent: 30px;
+}
+
+#readMore3:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#moreTxt3 {
+    display: none;
+}
+
+/*--------------------------------*/
+#readMore4 {
+    color: blue;
+    font-weight: bold;
+    font-size: 20px;
+    text-indent: 30px;
+}
+
+#readMore4:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#moreTxt4 {
+    display: none;
+}
+
+/*-------------------------------*/
+#readMore5 {
+    color: blue;
+    font-weight: bold;
+    font-size: 20px;
+    text-indent: 30px;
+}
+
+#readMore5:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#moreTxt5 {
+    display: none;
+}
+
+/*-------------------------------------*/
+#readMore6 {
+    color: blue;
+    font-weight: bold;
+    font-size: 20px;
+    text-indent: 30px;
+}
+
+#readMore6:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#moreTxt6 {
+    display: none;
+}
+
+/*--------------------------------------------Media Query.-----------------------------*/
+
+@media screen and (max-width: 600px) {
+    .divBlogImg {
+        display: none;
+    }
+
+    .divBlogImgEnd {
+        display: none;
+    }
+
+    .divBlogMain1 {
+        margin-top: 136px;
+    }
+
+    .divBlogP p {
+        font-size: 16px;
+    }
+
+    .divBlogHeading h2 {
+        font-size: 20px;
+    }
+
+    .divBlogPEnd p {
+        font-size: 16px;
+    }
+
+    .divBlogHeadingEnd h2 {
+        font-size: 20px;
+    }
+
+    .divBlogMain h4 {
+        font-size: 18px;
+    }
+
+    .divBlogMainEnd h4 {
+        font-size: 18px;
+    }
+
+    #readMore3 {
+        font-size: 16px;
+    }
+
+    #readMore4 {
+        font-size: 16px;
+    }
+
+    #readMore5 {
+        font-size: 16px;
+    }
+
+    #readMore6 {
+        font-size: 16px;
+    }
+
+    #readMore:hover {
+        cursor: default;
+        text-decoration: none;
+    }
+
+    #readMore2:hover {
+        cursor: default;
+        text-decoration: none;
+    }
+
+    #readMore3:hover {
+        cursor: default;
+        text-decoration: none;
+    }
+
+    #readMore4:hover {
+        cursor: default;
+        text-decoration: none;
+    }
+
+    #readMore5:hover {
+        cursor: default;
+        text-decoration: none;
+    }
+
+    #readMore6:hover {
+        cursor: default;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Furniture">
+    <meta name="keywords" content="furniture, wardrobre, bed, table, showcase, others">
+    <meta name="author" content="Georgi Gahov">
+    <title>Gahov Furniture - Количка</title>
+    <style>
+        body {
+            background: url("Image/background.jpg") repeat;
+        }
+    </style>
+    <link rel="stylesheet" href="CSS/HeaderAndFooter.css">
+    <link rel="stylesheet" href="CSS/Cart.css">
+    <link href='https://fonts.googleapis.com/css?family=Neuton' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+</head>
+
+<body id="body">
+    <header>
+        <div class="mobileLogo"><a href="FrontPage.html">Gahov
+                Furniture</a></div>
+        <div class="header">
+            <div class="imgCont">
+                <a href="FrontPage.html">
+                    <img src="Image/furn.jpg" width="160" height="160">
+                </a>
+            </div>
+
+            <div class="SgCont">
+                <div class="mainSearch">
+                    <form>
+                        <input type="text" id="main-search" onkeyup="getSearching()" required placeholder="Търсене..."
+                            autocomplete="off"><br>
+                        <input class="mSbtn" type="button" onclick="search()" value="Търси">
+                    </form>
+                </div>
+                <ul class="main-search-cont" id="main-search-cont" style="height: 606px; overflow-y: hidden;">
+                    <li><a href="OthersPage4.html">Бюра</a></li>
+                    <li><a href="OthersPage4.html">Бюро</a></li>
+                    <li><a href="ShowcasePage1.html">Витрина</a></li>
+                    <li><a href="ShowcasePage1.html">Витрини</a></li>
+                    <li><a href="OthersPage3.html">Врата</a></li>
+                    <li><a href="OthersPage3.html">Врати</a></li>
+                    <li><a href="WardrobePage1.html">Гардероб</a></li>
+                    <li><a href="WardrobePage1.html">Гардероби</a></li>
+                    <li><a href="OthersPage1.html">Детско легло</a></li>
+                    <li><a href="OthersPage1.html">Други</a></li>
+                    <li><a href="OthersPage2.html">Етажерка за стена</a></li>
+                    <li><a href="OthersPage6.html">Кухни</a></li>
+                    <li><a href="OthersPage6.html">Кухня</a></li>
+                    <li><a href="OthersPage3.html">Ламперия</a></li>
+                    <li><a href="OthersPage1.html">Малка библиотека</a></li>
+                    <li><a href="TablePage1.html">Маса</a></li>
+                    <li><a href="TablePage1.html">Маси</a></li>
+                    <li><a href="BedsPage1.html">Спални</a></li>
+                    <li><a href="BedsPage1.html">Спалня</a></li>
+                    <li><a href="OthersPage2.html">ТВ секция</a></li>
+                    <li><a href="OthersPage1.html">ТВ шкаф</a></li>
+                    <li><a href="OthersPage2.html">Тоалетка</a></li>
+                    <li><a href="OthersPage1.html">Шкаф</a></li>
+                </ul>
+                <div class="greetings">
+                    <p id="idGreetings"></p>
+                </div>
+            </div>
+
+            <div class="profile">
+                <div class="profileImg" id="profileImg">
+                    <img src="Image/profile logo.png" title="Профил" width="46" height="46">
+                </div>
+                <div class="profileName" id="profileName">
+                    <p id="idprofileName"></p>
+                </div>
+                <div class="eBtn">
+                    <input type="button" id="eBtn"
+                        onclick="document.getElementById('iddivForm1').style.display = 'block'" value="Вход">
+                </div>
+                <div class="exBtn" id="exBtn">
+                    <input type="button" id="idexBtn" value="Изход">
+                </div>
+                <div class="divForm1" id="iddivForm1">
+                    <form name="form1" id="form1" class="form1" method="post" action="#">
+                        <label for="uname" id="unameL">Потребител:</label>
+                        <span id="closeForm" class="closeForm">&times;</span><br>
+                        <input type="text" id="uname" name="uname" placeholder="Потребител..." autocomplete="off"
+                            required><br>
+                        <label for="psw" id="pswL">Парола:</label><br>
+                        <input type="password" id="psw" name="psw" placeholder="Парола..." autocomplete="off"
+                            required><br>
+                        <div class="eye"><img onclick="showPsw()" src="Image/eye icon.png" width="30" height="18"
+                                title="Покажи парола"></div>
+                        <span class="wrong" id="wrong"></span><br>
+                        <input type="checkbox"> Запомни ме!<br>
+                        <input type="submit" value="Вход"><br>
+                        <input type="button" id="reg" value="Регистрация" onclick="goToRegister()"><br>
+                        <a class="forgotpsw" href="Forgotten_password.html">Забравена
+                            парола?</a>
+                    </form>
+                </div>
+                <div class="loading" id="loading"></div>
+            </div>
+
+            <div class="LSC">
+                <div class="linksMobile">
+                    <span class="openNavMobile" id="openNav" onclick="openNav()">&#9776;</span>
+                </div>
+                <div class="searchMobile">
+                    <button id="searchButtonMobileUp"
+                        onclick="document.getElementById('mainSearchMobileCont').style.display = 'block'">Търси</button>
+                </div>
+                <div class="cart">
+                    <div class="cartImg">
+                        <img src="Image/cart logo.png" title="Количка" width="46" height="46">
+                    </div>
+                    <div class="cartName">
+                        <a href="Cart.html">Количка <span>0</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="modalShadow" id="modalShadow">
+        <div class="questionFrame" id="questionFrame">
+            <div class="closeQuestion">
+                <button id="closeQuestion">&times;</button>
+            </div>
+            <div class="question">
+                <div class="questionCont">
+                    <div>
+                        <img src="Image/attention.png" width="60" height="60">
+                    </div>
+                    <div>
+                        <div class="paragraph">
+                            <p>Сигурни ли сте, че искате да напуснете профила си?</p>
+                        </div>
+                        <div class="answers">
+                            <button id="answerYes">Да</button>
+                            <button id="answerNo">Не</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navLinksDesctop" id="navLinksDesctop">
+        <a href="WardrobePage1.html">Гардероби</a>
+        <a href="TablePage1.html">Маси</a>
+        <a href="BedsPage1.html">Спални</a>
+        <a href="ShowcasePage1.html">Витрини</a>
+        <a href="OthersPage1.html">Други</a>
+    </nav>
+
+    <div class="mainSearchMobileCont" id="mainSearchMobileCont">
+        <input type="text" id="searchFieldMobile" onkeyup="getSearchingM()" autocomplete="off" required
+            placeholder="Търсене..."><br>
+        <button id="searchButtonMobile" onclick="searchM()">Търси</button>
+    </div>
+    <ul class="main-search-cont-m" id="main-search-cont-m" style="height: 306px; overflow-y: hidden;">
+        <li><a href="OthersPage4.html">Бюра</a></li>
+        <li><a href="OthersPage4.html">Бюро</a></li>
+        <li><a href="ShowcasePage1.html">Витрина</a></li>
+        <li><a href="ShowcasePage1.html">Витрини</a></li>
+        <li><a href="OthersPage3.html">Врата</a></li>
+        <li><a href="OthersPage3.html">Врати</a></li>
+        <li><a href="WardrobePage1.html">Гардероб</a></li>
+        <li><a href="WardrobePage1.html">Гардероби</a></li>
+        <li><a href="OthersPage1.html">Детско легло</a></li>
+        <li><a href="OthersPage1.html">Други</a></li>
+        <li><a href="OthersPage2.html">Етажерка за стена</a></li>
+        <li><a href="OthersPage6.html">Кухни</a></li>
+        <li><a href="OthersPage6.html">Кухня</a></li>
+        <li><a href="OthersPage3.html">Ламперия</a></li>
+        <li><a href="OthersPage1.html">Малка библиотека</a></li>
+        <li><a href="TablePage1.html">Маса</a></li>
+        <li><a href="TablePage1.html">Маси</a></li>
+        <li><a href="BedsPage1.html">Спални</a></li>
+        <li><a href="BedsPage1.html">Спалня</a></li>
+        <li><a href="OthersPage2.html">ТВ секция</a></li>
+        <li><a href="OthersPage1.html">ТВ шкаф</a></li>
+        <li><a href="OthersPage2.html">Тоалетка</a></li>
+        <li><a href="OthersPage1.html">Шкаф</a></li>
+    </ul>
+
+    <div id="idnavMobileCont" class="navMobileCont">
+        <nav>
+            <span id="closeNav" class="closeNav">&times;</span>
+            <a href="WardrobePage1.html">Гардероби</a>
+            <a href="TablePage1.html">Маси</a>
+            <a href="BedsPage1.html">Спални</a>
+            <a href="ShowcasePage1.html">Витрини</a>
+            <a href="OthersPage1.html">Други</a>
+        </nav>
+    </div>
+
+    <!-----------------------End header.-------------------->
+
+    <div class="cart-empty">
+        <p>Няма продукти в количката!</p>
+        <button id="goBack" onclick="history.back()"><span>Назад</span></button>
+    </div>
+
+    <div class="main-titles">
+        <div class="product-title">
+            <h3>Продукт</h3>
+        </div>
+        <div class="quantity-title">
+            <h3>Брой</h3>
+        </div>
+        <div class="price-title">
+            <h3>Цена</h3>
+        </div>
+        <div class="total-title">
+            <h3>Общо</h3>
+        </div>
+    </div>
+    <div class="product-contain"></div>
+
+    <div class="finish-cart">
+        <div class="total-amount"></div>
+        <div>
+            <button type="button" onclick="history.back()">Продължи с пазаруването</button>
+        </div>
+        <div>
+            <button type="button" id="continue">Продължи с поръчката</button>
+        </div>
+        <div>
+            <button type="button" id="clear-cart">Изчисти количката</button>
+        </div>
+    </div>
+
+    <div class="loading-cart"></div>
+
+    <div class="modal">
+        <form action="#" method="post" class="cart-form animation" id="cart_form" onsubmit="return validateCartForm()">
+            <span class="close">&times;</span>
+            <label for="name-cart">Име:</label><br>
+            <input type="text" id="name-cart" name="name-cart" autocomplete="off"><br>
+            <label for="phone-cart">Телефон:</label><br>
+            <input type="tel" id="phone-cart" name="phone-cart" autocomplete="off"><br>
+            <label for="email-cart">Имейл:</label><br>
+            <input type="text" id="email-cart" name="email-cart" autocomplete="off"><br>
+            <p>Адрес за доставка</p>
+            <label for="city-cart">гр./с.</label>
+            <input type="text" id="city-cart" name="city-cart" autocomplete="off"><br>
+            <label for="street-cart">ул.</label>
+            <input type="text" id="street-cart" name="street-cart" autocomplete="off">
+            <p>Начин на плащане</p>
+            <input type="radio" id="bank" name="payment" value="По банков път" autocomplete="off">
+            <label for="bank">По банков път</label><br>
+            <input type="radio" id="cash" name="payment" value="В брой при доставка" autocomplete="off">
+            <label for="cash">В брой при доставка</label><br>
+            <input type="checkbox" id="agreement" name="agreement" autocomplete="off">
+            <label for="agreement">Съгласявам се с <a href="Delivery.html">условията за доставка</a> !</label><br>
+            <p id="valid-info"></p>
+            <input type="submit" value="Завърши поръчката">
+        </form>
+    </div>
+
+    <div class="modal-order">
+        <div class="order-main animation-2">
+            <span id="close_order">&times;</span>
+            <h3>Преглед на поръчката</h3>
+            <div class="order-flex">
+                <div class="order-contain-main">
+                    <div class="order-contain"></div>
+                </div>
+                <div class="client-info">
+                    <p style="font-weight: bold;">Име:</p>
+                    <p id="name_result"></p>
+                    <p style="font-weight: bold;">Телефон:</p>
+                    <p id="phone_result"></p>
+                    <p style="font-weight: bold;">Имейл:</p>
+                    <p id="email_result"></p>
+                    <p style="font-weight: bold;">Град/село:</p>
+                    <p id="city_result"></p>
+                    <p style="font-weight: bold;">Улица, &#x02116;, ет., ап. :</p>
+                    <p id="street_result"></p>
+                    <p style="font-weight: bold;">Начин на плащане:</p>
+                    <p id="payment_result"></p>
+                    <p style="font-weight: bold;">Сума за плащане:</p>
+                    <p id="total_price_order"></p>
+                </div>
+            </div>
+            <form action="#" method="post" class="order_conf">
+                <input type="checkbox" id="confirmation" name="confirmation">
+                <label for="confirmation">Потвърждавам поръчката!</label>
+                <div>
+                    <input type="button" id="make_order_button" value="Поръчай">
+                </div>
+            </form>
+            <form action="#" method="post" class="order_conf_m">
+                <input type="checkbox" id="confirmation-m" name="confirmation">
+                <label for="confirmation">Потвърждавам поръчката!</label>
+                <div>
+                    <input type="button" id="make_order_button_m" value="Поръчай">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="pos-main">
+        <div class="pos-hole">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="receipt">
+            <p>Gahov Furniture</p>
+            <p>гр. Разлог</p>
+            <p>Георги Финдрин 13</p>
+            <div class="pos-total">
+                <div>
+                    <p>Обща сума:</p>
+                </div>
+                <div id="receipt-amount"></div>
+            </div>
+            <img src="Image/kindpng_1202089.png" width="40" height="40">
+            <p>ФИСКАЛЕН БОН</p>
+            <p style="font-size: 16px;">Благодарим Ви, че пазарувахте от нас.</p>
+        </div>
+        <div class="pos-main-contain">
+            <div class="screen"></div>
+            <div class="pos-buttons">
+                <div class="buttons-row">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="buttons-row">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="buttons-row">
+                    <div style="background-color: red;"></div>
+                    <div style="background-color: #008a20; text-align: center;" id="home-page">
+                        <p style="margin: 6px; font-weight: bold;">Начало</p>
+                    </div>
+                    <div style="background-color: #dba617;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="order-end-s">
+        <p>Благодарим Ви, че пазарувахте от нас.</p>
+        <button type="button" id="home-page-m">Начало</button>
+    </div>
+
+    <!-------------------Footer.----------------->
+
+    <div class="footerDesctop">
+        <div>
+            <a href="FrontPage.html">Начало</a>
+        </div>
+        <div>
+            <a href="AboutUs.html">За нас</a>
+        </div>
+        <div>
+            <a href="Blog.html">Блог</a>
+        </div>
+        <div>
+            <a href="Gallery.html">Галерия</a>
+        </div>
+        <div>
+            <a href="Contact.html">Контакти</a>
+        </div>
+    </div>
+
+    <div class="footer-end-main">
+        <div class="footer-end">
+            <div class="footer-copy">
+                <p>Copyright&#169; 2022 &nbsp;&nbsp;<span style="font-weight: bold;">|</span>&nbsp;&nbsp; All rights
+                    reserved</p>
+            </div>
+            <div class="author">
+                <p>Created By <a href="#">G. Gahov</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footerMobileLinks" id="footerMobileLinks">
+        <a href="FrontPage.html">Начало</a><br>
+        <a href="AboutUs.html">За нас</a><br>
+        <a href="Blog.html">Блог</a><br>
+        <a href="Gallery.html">Галерия</a><br>
+        <a href="Contact.html">Контакти</a>
+        <div class="footer-end-main-s">
+            <p>Copyright&#169; 2022 &nbsp;&nbsp;<span style="font-weight: bold;">|</span>&nbsp;&nbsp; All rights
+                reserved</p>
+            <p>Created By <a href="#" style="display: inline; font-size: 18px; text-decoration: underline;">G. Gahov</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="footerMobileMain">
+        <div class="footerMobileButtonMain" id="footerMobileButtonMain">
+            <div class="footerMobileButton" id="footerMobileButton" onclick="classList.toggle('change')">
+                <div class="divFooter1"></div>
+                <div class="divFooter2"></div>
+                <div class="divFooter3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------Scripts.----------------->
+
+    <script src="JS/HeaderAndFooter.js"></script>
+    <script src="JS/BedsPage1.js"></script>
+    <script src="JS/Cart.js"></script>
+</body>
+
+</html>

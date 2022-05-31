@@ -1,0 +1,224 @@
+/*--------------------------Styling main image.---------------------*/
+
+.gallery-main {
+    width: 100%;
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 42px;
+}
+
+.gallery-container {
+    width: 74%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.gallery-container img {
+    box-shadow: 10px 10px 6px #464545;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.slides {
+    display: none;
+}
+
+.numbers {
+    position: absolute;
+    font-size: 20px;
+    color: #FFFFFF;
+    top: 10px;
+    left: 16px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    font-weight: bold;
+    font-size: 38px;
+    top: 40%;
+    border: none;
+    border-radius: 8px;
+    background: none;
+    transition: 0.3s;
+}
+
+.next {
+    right: 80px;
+}
+
+.prev {
+    left: 80px;
+}
+
+.next:hover {
+    transform: translateX(3px);
+}
+
+.prev:hover {
+    transform: translateX(-3px);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*--------------------Styling bottom images.--------------------*/
+
+.cursor {
+    cursor: pointer;
+}
+
+.row {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 10px;
+    margin-bottom: 4px;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row img {
+    border: 2px solid black;
+}
+
+.column {
+    float: left;
+    width: 9.2%;
+    margin: 0 4px;
+}
+
+.demo {
+    opacity: 0.8;
+}
+
+.active, .demo:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/*------------------------------*/
+
+.gallery-m-main {
+    display: none;
+}
+
+/*-------------------Styling gallery for samll screen.----------------*/
+
+.gallery-m-main {
+    width: 100%;
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+
+.gallery-m-cont {
+    width: 84%;
+    margin: 10px auto 0 auto;
+}
+
+.gallery-m-cont img {
+    border-radius: 14px;
+    margin: 0 4px 0 4px;
+}
+
+.gallery-modal {
+    background-color: rgb(27, 27, 27);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    padding-top: 120px;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    display: none;
+}
+
+.modal-cont {
+    width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slides-m {
+    display: none;
+    animation: gallery-m 0.4s;
+}
+
+@keyframes gallery-m {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.close-gallery-modal {
+    position: absolute;
+    font-size: 46px;
+    color: #f1f1f1;
+    font-weight: bold;
+    right: 28px;
+    top: 36px;
+}
+
+.close-gallery-modal:hover {
+    cursor: default;
+}
+
+.prev-m, .next-m {
+    position: absolute;
+    top: 36%;
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: #f1f1f1;
+}
+
+.next-m {
+    right: 0;
+}
+
+.numbers-m {
+    position: absolute;
+    color: #f1f1f1;
+    font-size: 20px;
+    top: 86px;
+    display: none;
+}
+
+/*------------------------------------Media Query------------------------------*/
+
+@media screen and (max-width: 600px) {
+    .gallery-m-main {
+        display: block;
+    }
+
+    .gallery-main {
+        display: none;
+    }
+
+    .row {
+        display: none;
+    }
+}

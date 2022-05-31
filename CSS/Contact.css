@@ -1,0 +1,493 @@
+/*--------------------------Styling contact form.------------------*/
+
+.contactFormMain {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    height: 550px;
+}
+
+.contactForm {
+    text-align: center;
+    padding-top: 56px;
+    padding-bottom: 20px;
+    z-index: 1;
+}
+
+.contactForm form {
+    background-image: linear-gradient(120deg, #3c434a, #50575e, #646970, #787c82, #8c8f94, #a7aaad, #c3c4c7, #f0f0f1);
+    width: 480px;
+    border: 1px solid black;
+    padding-top: 32px;
+    padding-bottom: 12px;
+    position: relative;
+}
+
+.inputField {
+    position: relative;
+}
+
+.inputField:last-child {
+    margin-bottom: 0;
+}
+
+.contactForm input[type=text] {
+    border: 2px solid black;
+    width: 280px;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 28px;
+}
+
+.contactForm input[type=tel] {
+    border: 2px solid black;
+    width: 280px;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 28px;
+}
+
+.contactForm textarea {
+    border: 2px solid black;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 6px;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.contactForm input[type=submit] {
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 16px;
+    color: black;
+    padding: 10px;
+    width: 200px;
+    background-image: linear-gradient(to right, #edfaef, #68de7c, #1ed14b, #00ba37, #00a32a, #008a20, #008a20, #008a20, #00a32a, #00ba37, #1ed14b, #68de7c, #edfaef);
+    background-size: 200%;
+    transition: 0.8s;
+    font-weight: bold;
+}
+
+.contactForm input[type=submit]:hover {
+    cursor: pointer;
+    background-position: right;
+    background-size: 200%;
+}
+
+.span1 {
+    position: absolute;
+    transform: translateY(0px);
+    left: 102px;
+    top: 10px;
+    transition: 0.6s;
+}
+
+.span2 {
+    position: absolute;
+    left: 56px;
+    top: 10px;
+    transition: 0.6s;
+}
+
+.inputField input:focus~.span1,
+.inputField input:not(:placeholder-shown)~.span1 {
+    transform: translateY(-34px);
+    font-weight: bold;
+}
+
+.inputField textarea:focus~.span2,
+.inputField textarea:not(:placeholder-shown)~.span2 {
+    transform: translateY(-34px);
+    font-weight: bold;
+}
+
+/*-----------------------Styling contact address.-------------------*/
+
+.contactAddressMain {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Neuton';
+    margin-bottom: 24px;
+}
+
+.contactAddressC {
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 18px;
+    width: 380px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    transition: 0.6s;
+}
+
+.contactAddressC:hover {
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.contactAddressC p {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.contactAddressC a {
+    text-decoration: none;
+    color: red;
+    letter-spacing: 3px;
+    margin-top: 6px;
+    font-weight: normal;
+}
+
+.contactAddressC a:hover {
+    letter-spacing: 4px;
+    text-decoration: underline;
+}
+
+.map {
+    width: 420px;
+    height: 200px;
+}
+
+.map iframe {
+    border: 2px solid black;
+    box-shadow: 8px 8px 4px #646970;
+}
+
+/*------------------------Styling envelope.------------------*/
+
+.envelope {
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+.envelope div {
+    width: 482px;
+    height: 466px;
+    right: 433px;
+    background-color: #f0c33c;
+    z-index: 1;
+    position: absolute;
+    top: 392px;
+    animation: envelope 1.5s;
+}
+
+@keyframes envelope {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0.3);
+    }
+}
+
+/*-------------------------Styling envelope end.--------------------*/
+
+.envelopeEnd {
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+.envelopeEnd div {
+    background-color: #f0c33c;
+    width: 144px;
+    height: 139px;
+    margin-top: 219px;
+    right: 602px;
+    position: absolute;
+    animation: godown 5s;
+    z-index: 1;
+}
+
+@keyframes godown {
+    from {
+        top: 336px;
+    }
+
+    to {
+        top: 900px;
+    }
+}
+
+/*---------------------Styling envelope box.-------------------*/
+
+.envBoxMain {
+    position: absolute;
+    top: 800px;
+    width: 100%;
+    display: none;
+}
+
+.envBoxF {
+    background-color: black;
+    height: 18px;
+    width: 100%;
+}
+
+.envBoxS {
+    display: flex;
+    justify-content: center;
+}
+
+.BoxS1 {
+    background-color: black;
+    height: 18px;
+    width: 546px;
+}
+
+.BoxS2 {
+    background-color: #50575e;
+    height: 18px;
+    width: 260px;
+}
+
+.BoxS3 {
+    background-color: black;
+    height: 18px;
+    width: 546px;
+}
+
+.envBoxT {
+    width: 100%;
+    height: 366px;
+    background-color: black;
+    z-index: 2;
+    position: relative;
+}
+
+/*-------------------------Styling back button.--------------------*/
+
+.ContactBackMain {
+    width: 404px;
+    position: absolute;
+    display: none;
+    animation: backbutton 1.6s;
+}
+
+@keyframes backbutton {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+.ContactBackB {
+    width: 400px;
+    height: 96px;
+    text-align: center;
+    margin-top: 190px;
+    position: absolute;
+}
+
+.ContactBackB button {
+    font-size: 20px;
+    padding: 8px;
+    width: 120px;
+    margin-top: 26px;
+    font-weight: bold;
+    background: none;
+    border: 3px solid #d63638;
+    color: #d63638;
+    transition: 0.4s;
+}
+
+.ContactBackB button:hover {
+    color: white;
+    background: #d63638;
+    cursor: pointer;
+    box-shadow: 0 0 5px #d63638, 0 0 25px #d63638, 0 0 50px #d63638, 0 0 100px #d63638;
+}
+
+.ContactBackP {
+    width: 406px;
+    height: 120px;
+    padding: 2px;
+    text-align: center;
+    position: absolute;
+    top: 190px;
+    left: -4px;
+    background-image: linear-gradient(to right, #8c8f94, #50575e, #3c434a, #2c3338);
+    box-shadow: 8px 8px 4px #aaaaaa;
+    transition: .6s;
+}
+
+.ContactBackP p {
+    font-size: 18px;
+    font-family: 'Neuton';
+    color: #f0f0f1;
+}
+
+/*------------------------------*/
+.contactFormMobile {
+    display: none;
+}
+
+/*--------------------Styling contact form for small screen.--------------*/
+
+.contactFormMobile {
+    text-align: center;
+}
+
+.contactFormMobile form {
+    border: 1px solid black;
+    background-image: linear-gradient(120deg, #3c434a, #50575e, #646970, #787c82, #8c8f94, #a7aaad, #c3c4c7, #f0f0f1);
+    font-family: 'Neuton';
+    padding: 8px;
+}
+
+.contactFormMobile input[type=text] {
+    border: 2px solid black;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 230px;
+    margin-top: 2px;
+    margin-bottom: 6px;
+    padding: 4px;
+}
+
+.contactFormMobile input[type=tel] {
+    border: 2px solid black;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 230px;
+    margin-top: 4px;
+    margin-bottom: 6px;
+    padding: 2px;
+}
+
+.contactFormMobile textarea {
+    border: 2px solid black;
+    border-radius: 6px;
+    resize: none;
+    font-size: 14px;
+    margin-top: 2px;
+    padding: 4px;
+}
+
+.contactFormMobile label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contactFormMobile input[type=submit] {
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 14px;
+    color: black;
+    padding: 8px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #edfaef, #68de7c, #1ed14b, #00ba37, #00a32a, #008a20, #00a32a, #00ba37, #1ed14b, #68de7c, #edfaef);
+}
+
+/*------------------Styling loading for form for small screen.--------------------*/
+
+.loading-contact-form-m {
+    border: 8px solid black;
+    border-radius: 50%;
+    border-top: 8px solid gray;
+    border-bottom: 8px solid gray;
+    width: 52px;
+    height: 52px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    z-index: 1;
+    left: 216px;
+    top: 620px;
+    display: none;
+}
+
+/*---------------------Styling back button for contact form.-----------------*/
+
+.contact-back-mobile {
+    text-align: center;
+    font-family: 'Neuton';
+    padding-top: 64px;
+    display: none;
+}
+
+.contact-back-mobile p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact-back-mobile button {
+    font-size: 18px;
+    padding: 6px;
+    width: 100px;
+    margin-top: 26px;
+    font-weight: bold;
+    background: none;
+    border: 3px solid #d63638;
+    color: #d63638;
+}
+
+/*------------------------------------Media Query-------------------------------*/
+
+@media screen and (max-width: 600px) {
+    .contactFormMobile {
+        display: block;
+    }
+
+    .contactForm {
+        display: none;
+    }
+
+    .contactFormMain {
+        margin-top: 150px;
+        height: 440px;
+    }
+
+    /*------------------------------------*/
+
+    .contactAddressMain {
+        display: block;
+        width: 100%;
+    }
+
+    .contactAddressC {
+        border-radius: 20px;
+        padding: 12px;
+        width: 330px;
+        margin-left: 74px;
+        margin-top: -8px;
+    }
+
+    .contactAddressC:hover {
+        border-radius: 20px;
+    }
+
+    .contactAddressC a {
+        text-decoration: underline;
+        cursor: default;
+    }
+
+    .contactAddressC a:hover {
+        letter-spacing: 3px;
+    }
+
+    .contactAddressC p {
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    /*---------------------------------*/
+    .map {
+        width: 330px;
+        height: 160px;
+        margin-left: 84px;
+        margin-top: 26px;
+    }
+}
