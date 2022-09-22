@@ -1,0 +1,280 @@
+/*---------------------Styling delivery.--------------------*/
+
+.delivery-main {
+    font-family: 'Neuton';
+}
+
+.delivery-main h2 {
+    text-align: center;
+    font-size: 30px;
+    background-color: #c3c4c7;
+    padding: 10px 0 16px 0;
+}
+
+.delivery-main p {
+    font-size: 18px;
+    margin: 6px;
+}
+
+.delivery-main h3 {
+    font-size: 24px;
+}
+
+.delivery-f-img img {
+    margin-left: 140px;
+    margin-top: 50px;
+}
+
+.delivery-f {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.delivery-f-txt {
+    padding: 0 12px;
+}
+
+/*-------------------------------------------*/
+
+.delivery-s {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 20px;
+}
+
+.delivery-s-txt {
+    padding: 0 12px;
+}
+
+.delivery-s-img {
+    margin-top: 26px;
+}
+
+.delivery-s-img img {
+    margin-left: 100px;
+}
+
+/*----------------------------Styling payment.-------------------------*/
+
+.payment-main {
+    font-family: 'Neuton';
+}
+
+.payment-main h2 {
+    text-align: center;
+    font-size: 30px;
+    background-color: #c3c4c7;
+    padding: 10px 0 16px 0;
+    margin-top: 70px;
+}
+
+.payment-main h3 {
+    font-size: 24px;
+}
+
+.payment-main p {
+    font-size: 18px;
+    margin: 6px;
+}
+
+.payment-f {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.payment-f-txt {
+    padding: 0 12px;
+}
+
+.payment-f-img img {
+    margin-left: 140px;
+}
+
+.payment-s {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 20px;
+}
+
+.payment-s-txt {
+    padding: 0 12px;
+}
+
+.payment-s-img img {
+    margin-left: 110px;
+    margin-top: 100px;
+}
+
+.payment-t {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin-top: 20px;
+}
+
+.payment-t-txt {
+    padding: 0 12px;
+    position: relative;
+}
+
+.payment-t-img img {
+    margin-left: 140px;
+    margin-top: 70px;
+}
+
+.payment-t-img2 {
+    position: absolute;
+    top: 190px;
+    left: 320px;
+}
+
+.payment-ff {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.payment-ff-txt {
+    padding: 0 12px;
+}
+
+.payment-ff-img img {
+    margin-left: 120px;
+    margin-top: 80px;
+}
+
+/*-------------------------------------Media Query.-----------------------------*/
+
+@media screen and (max-width: 600px) {
+    .delivery-f {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .delivery-main h2 {
+        font-size: 22px;
+        margin-top: 132px;
+    }
+
+    .delivery-main p {
+        font-size: 16px;
+        margin: 4px;
+    }
+
+    .delivery-main h3 {
+        font-size: 20px;
+    }
+
+    .delivery-f-img {
+        text-align: center;
+    }
+
+    .delivery-f-img img {
+        width: 160px;
+        height: 160px;
+        margin: 0;
+    }
+
+    .delivery-s {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .delivery-s-img {
+        grid-area: 1/1;
+        text-align: center;
+    }
+
+    .delivery-s-img img {
+        margin: 0;
+        width: 180px;
+        height: 160px;
+    }
+
+    /*------------------------------------*/
+
+    .payment-main h2 {
+        font-size: 22px;
+    }
+
+    .payment-main h3 {
+        font-size: 20px;
+    }
+
+    .payment-main p {
+        font-size: 16px;
+        margin: 4px;
+    }
+
+    .payment-f {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .payment-f-img {
+        text-align: center;
+    }
+
+    .payment-f-img img {
+        margin: 0;
+        width: 140px;
+        height: 140px;
+    }
+
+    .payment-s {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .payment-s-img {
+        grid-area: 1/1;
+        text-align: center;
+    }
+
+    .payment-s-img img {
+        margin: 0;
+        width: 160px;
+        height: 160px;
+    }
+
+    .payment-t {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .payment-t-img {
+        text-align: center;
+    }
+
+    .payment-t-img img {
+        margin: 0;
+        width: 160px;
+        height: 180px;
+    }
+
+    .payment-t-img2 {
+        top: 150px;
+        left: 230px;
+    }
+
+    .payment-t-img2 img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .payment-ff {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .payment-ff-img {
+        grid-area: 1/1;
+        text-align: center;
+    }
+
+    .payment-ff-img img {
+        margin: 0;
+        width: 160px;
+        height: 180px;
+    }
+}

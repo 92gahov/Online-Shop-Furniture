@@ -1,0 +1,1234 @@
+/*------------------------------Layout header.----------------------*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.mobileLogo {
+    text-align: center;
+    font-family: 'Allerta Stencil';
+    background-color: black;
+    display: none;
+    padding: 14px;
+}
+
+.mobileLogo a {
+    color: red;
+    text-decoration: none;
+    font-size: 32px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 180px 840px 170px 130px;
+    grid-gap: 10px;
+    padding: 10px;
+    height: 260px;
+    font-family: 'Neuton';
+}
+
+/*----------------------------Styling left img.-------------------*/
+
+.imgCont {
+    text-align: center;
+}
+
+.imgCont img {
+    border: 3px solid black;
+    border-radius: 8px;
+    opacity: 1;
+    box-shadow: 8px 8px 4px #aaaaaa;
+    margin-top: 24px;
+}
+
+.imgCont img:active {
+    box-shadow: 10px 10px 6px #aaaaaa;
+}
+
+/*-----------------------Styling main search.------------------*/
+
+.SgCont {
+    text-align: center;
+}
+
+.mainSearch {
+    margin-top: 50px;
+    width: 500px;
+    margin-left: 200px;
+}
+
+.mainSearch input[type=text] {
+    width: 380px;
+    height: 28px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 24px;
+    background-image: url("../Image/search_icon.png");
+    position: left;
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 40px;
+    padding-left: 36px;
+    box-shadow: 3px 6px 6px 6px #888888;
+}
+
+.mSbtn {
+    font-size: 22px;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    background-color: red;
+    text-align: center;
+    width: 90px;
+    cursor: pointer;
+    padding: 6px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-family: 'Neuton';
+}
+
+.mSbtn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.mSbtn:active {
+    transform: translateY(1px);
+}
+
+/*-------------------------Styling main search content.----------------------*/
+
+.main-search-cont {
+    background-color: #f0f0f1;
+    position: absolute;
+    z-index: 2;
+    width: 420px;
+    padding: 0;
+    top: 98px;
+    left: 440px;
+    display: none;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+}
+
+.main-search-cont li {
+    margin: 4px 0;
+}
+
+.main-search-cont li a {
+    text-decoration: none;
+    font-family: 'Neuton';
+    font-size: 28px;
+    color: black;
+}
+
+.main-search-cont a:hover {
+    color: #8c8f94;
+}
+
+/*-------------------------Styling greetings.--------------------*/
+
+.greetings {
+    font-family: 'Neuton';
+    font-size: 18px;
+    margin-top: -10px;
+}
+
+/*-------------------------Styling profil logo.------------------*/
+
+.profile {
+    padding-top: 50px;
+    font-family: 'Neuton';
+}
+
+.profile img {
+    border-radius: 50%;
+    border: 2px dotted red;
+    padding: 4px;
+}
+
+.profileImg {
+    text-align: center;
+    animation: animatezoom 0.3s;
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/*------------------------Styling profile name.--------------------*/
+
+.profileName {
+    overflow: hidden;
+    text-align: center;
+    margin-top: -16px;
+    display: none;
+}
+
+.profileName {
+    animation: animatezoom 0.8s;
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.profileName p {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+/*-------------------------Styling entry button.------------------*/
+
+.eBtn {
+    text-align: center;
+    margin-top: 14px;
+    position: absolute;
+    margin-left: 40px;
+}
+
+.eBtn {
+    animation: animatezoom 0.3s;
+}
+
+@keyframes animatezoom {
+    form {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.eBtn input[type=button] {
+    font-size: 22px;
+    width: 90px;
+    letter-spacing: 1px;
+    background-color: #04AA6D;
+    border: 1px solid black;
+    border-radius: 8px;
+    opacity: 0.8;
+    color: white;
+}
+
+.eBtn input[type=button]:hover {
+    cursor: pointer;
+    opacity: 1;
+    animation: shake 0.6s infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0px, 0px) rotate(odeg);
+    }
+
+    25% {
+        transform: translate(1px, 1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, -1px) rotate(-1deg);
+    }
+
+    75% {
+        transform: translate(2px, -1px) rotate(2deg);
+    }
+
+    100% {
+        transform: translate(-1px, 1px) rotate(-1deg);
+    }
+}
+
+.eBtn input[type=button]:active {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*-------------------------Styling exit button.----------------------*/
+
+.exBtn {
+    margin-top: -12px;
+    text-align: center;
+    display: none;
+    position: absolute;
+    margin-left: 40px;
+}
+
+.exBtn {
+    animation: animatezoom 0.3s;
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.exBtn input[type=button] {
+    font-size: 22px;
+    width: 90px;
+    letter-spacing: 1px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: red;
+    color: white;
+}
+
+.exBtn input[type=button]:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    animation: shake 0.6s infinite
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0px, 0px) rotate(odeg);
+    }
+
+    25% {
+        transform: translate(1px, 1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, -1px) rotate(-1deg);
+    }
+
+    75% {
+        transform: translate(2px, -1px) rotate(2deg);
+    }
+
+    100% {
+        transform: translate(-1px, 1px) rotate(-1deg);
+    }
+}
+
+.exBtn input[type=button]:active {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*--------------------------Styling cart.---------------------*/
+
+.LSC {
+    width: 110px;
+    font-family: 'Neuton';
+}
+
+.cart {
+    text-align: center;
+    padding-top: 48px;
+    font-family: 'Neuton';
+}
+
+.cart img {
+    border-radius: 50%;
+    border: 2px dotted red;
+    padding: 4px;
+}
+
+.cart a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.cart a:hover {
+    text-decoration: underline;
+}
+
+.cart a:active {
+    letter-spacing: 1px;
+}
+
+.cartName {
+    margin-top: 6px;
+}
+
+/*--------------------------Styling form entry.---------------------*/
+
+.divForm1 {
+    position: absolute;
+    right: 100px;
+    margin-top: 46px;
+    display: none;
+    z-index: 2;
+}
+
+.divForm1 {
+    animation: animatezoom 0.4s;
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.form1 {
+    border: 2px solid black;
+    border-radius: 12px;
+    width: 204px;
+    font-family: 'Neuton';
+    font-size: 18px;
+    padding: 12px;
+    background-image: url("../Image/formbackground.jpg");
+}
+
+.form1 input[type=text] {
+    width: 180px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 18px;
+    background-image: url("../Image/user\ logo.png");
+    position: left;
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 16px;
+    padding-left: 16px;
+    margin-top: 4px;
+}
+
+.closeForm {
+    position: absolute;
+    right: 20px;
+    color: black;
+    font-size: 60px;
+    font-weight: bold;
+    top: -24px;
+}
+
+.closeForm:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.form1 input[type=password] {
+    width: 180px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 18px;
+    background-image: url("../Image/password\ logo.jpg");
+    position: left;
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 20px;
+    padding-left: 16px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.eye {
+    text-align: center;
+}
+
+.eye img {
+    border-radius: 50%;
+    border: none;
+}
+
+.eye img:hover {
+    cursor: pointer;
+    border: none;
+}
+
+.wrong {
+    font-size: 14px;
+    margin-left: 9px;
+    color: red;
+    font-weight: bold;
+}
+
+.form1 input[type=submit] {
+    font-size: 22px;
+    width: 90px;
+    letter-spacing: 1px;
+    background-color: #04AA6D;
+    border: 1px solid black;
+    border-radius: 8px;
+    opacity: 0.8;
+    color: white;
+    margin-top: 6px;
+    margin-left: 56px;
+}
+
+.form1 input[type=submit]:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.form1 input[type=submit]:active {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form1 input[type=button] {
+    font-size: 18px;
+    padding: 4px;
+    width: 160px;
+    border: 1px solid black;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    background-color: red;
+    color: black;
+    margin-left: 22px;
+}
+
+.form1 input[type=button]:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.form1 input[type=button]:active {
+    transform: translateY(1px);
+}
+
+.forgotpsw {
+    text-decoration: none;
+    color: black;
+}
+
+.forgotpsw:hover {
+    text-decoration: underline;
+}
+
+.forgotpsw:active {
+    color: red;
+}
+
+/*-------------------------Styling loading.----------------------*/
+
+.loading {
+    border: 8px solid black;
+    border-radius: 50%;
+    border-top: 8px solid gray;
+    border-bottom: 8px solid gray;
+    width: 52px;
+    height: 52px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    z-index: 1;
+    margin-left: 52px;
+    margin-top: 10px;
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*-------------------------Styling navbar.------------------*/
+
+.navLinksDesctop {
+    overflow: hidden;
+    background-color: black;
+}
+
+.navLinksDesctop a {
+    float: left;
+    display: block;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 14px 90px;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.4s;
+}
+
+.navLinksDesctop a:hover {
+    color: #a7aaad;
+}
+
+/*---------------------Styling question form for exit profile.-----------------*/
+
+.modalShadow {
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 1;
+    font-family: 'Neuton';
+    padding-top: 200px;
+    display: none;
+}
+
+.questionFrame {
+    background-color: orange;
+    width: 360px;
+    height: 216px;
+    margin-left: 34%;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-top: 8px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.questionFrame {
+    animation: animatequestion 0.8s;
+}
+
+@keyframes animatequestion {
+    from {
+        top: -440px;
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+.questionCont {
+    display: flex;
+    padding-top: 40px;
+}
+
+.questionCont img {
+    padding: 8px;
+}
+
+.questionCont button {
+    font-size: 20px;
+    width: 60px;
+    border: none;
+    color: black;
+    background-color: #dcdcde;
+    border-radius: 6px;
+}
+
+.questionCont button:hover {
+    background-color: #c3c4c7;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+
+.questionCont button:active {
+    transform: translateY(1px);
+}
+
+.paragraph {
+    text-align: center;
+    padding-bottom: 24px;
+}
+
+.question {
+    background-color: white;
+    height: 180px;
+}
+
+.answers {
+    margin-left: 140px;
+}
+
+.closeQuestion {
+    text-align: right;
+}
+
+.closeQuestion button {
+    font-size: 26px;
+    color: red;
+    font-weight: bold;
+    border: none;
+    width: 60px;
+    background-color: white;
+}
+
+.closeQuestion button:hover {
+    background-color: red;
+    border-radius: 12px;
+    color: black;
+    cursor: pointer;
+}
+
+/*---------------------------------------------------------------------*/
+
+.linksMobile {
+    display: none;
+}
+
+.searchMobile {
+    display: none;
+}
+
+.footerMobileButtonMain {
+    display: none;
+}
+
+.footer-end-main-s {
+    display: none;
+}
+
+/*----------------------*/
+
+/*---------------------------Styling footer.---------------------*/
+
+.footerDesctop {
+    font-family: 'Neuton';
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    overflow: hidden;
+}
+
+.footerDesctop a {
+    color: #f1f1f1;
+    text-align: center;
+    padding: 26px;
+    font-size: 25px;
+    display: block;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.footerDesctop a:hover {
+    color: #a7aaad;
+}
+
+
+/*--------------------Start styling for small screen.-----------------*/
+
+/*-----------------Styling navigation links for small screen.--------------*/
+
+.linksMobile {
+    text-align: center;
+}
+
+.openNavMobile {
+    font-size: 36px;
+    color: black;
+}
+
+.openNavMobile:hover {
+    cursor: default;
+}
+
+.navMobileCont {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    background-color: black;
+    transition: 0.6s;
+    padding-top: 68px;
+}
+
+.navMobileCont a {
+    padding: 8px 8px 16px 30px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.4s;
+}
+
+.navMobileCont a:hover {
+    cursor: default;
+}
+
+.closeNav {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #f1f1f1;
+    font-weight: bold;
+}
+
+.closeNav:hover {
+    cursor: default;
+}
+
+/*----------------Styling search button middle for small screen.---------------*/
+
+.searchMobile {
+    text-align: center;
+}
+
+.searchMobile button {
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: tomato;
+    color: black;
+}
+
+.searchMobile button:active {
+    transform: translateY(1px)
+}
+
+.mainSearchMobileCont {
+    margin-top: 64px;
+    text-align: center;
+    height: 72px;
+    position: absolute;
+    width: 100%;
+    padding-top: 4px;
+    display: none;
+}
+
+.mainSearchMobileCont {
+    animation: animatebottom 0.4s;
+}
+
+@keyframes animatebottom {
+    from {
+        top: 340px;
+    }
+
+    to {
+        top: 350px;
+    }
+}
+
+.mainSearchMobileCont input[type=text] {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    height: 22px;
+    width: 300px;
+    font-size: 20px;
+    background-image: url("../Image/search_icon.png");
+    position: left;
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 32px;
+    padding-left: 28px;
+    box-shadow: 1px 3px 3px 3px #888888;
+    font-family: 'Neuton';
+}
+
+.mainSearchMobileCont button {
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    background-color: red;
+    padding: 2px;
+    font-family: 'Neuton';
+    width: 60px;
+    margin-top: 8px;
+}
+
+.mainSearchMobileCont button:active {
+    transform: translateY(1px);
+}
+
+/*-----------------Styling main search content for small screen.---------------*/
+
+.main-search-cont-m {
+    background-color: #f0f0f1;
+    position: absolute;
+    z-index: 2;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    width: 300px;
+    top: 434px;
+    left: 100px;
+    display: none;
+}
+
+.main-search-cont-m li {
+    margin: 4px 0;
+}
+
+.main-search-cont-m li a {
+    text-decoration: none;
+    font-family: 'Neuton';
+    font-size: 20px;
+    color: black;
+}
+
+.main-search-cont-m a:hover {
+    cursor: default;
+}
+
+/*-----------------Styling footer button for small screen.----------------*/
+
+.footerMobileButtonMain {
+    border: 2px solid black;
+    border-radius: 2px;
+    background-color: #f3f3f3;
+    width: 462px;
+    margin-left: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.footerMobileMain {
+    display: block;
+    text-align: center;
+}
+
+.footerMobileButton {
+    display: inline-block;
+}
+
+.divFooter1, .divFooter2, .divFooter3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .divFooter1 {
+    transform: rotate(-45deg) translate(-9px, 6px);
+    background-color: red;
+}
+
+.change .divFooter2 {
+    opacity: 0;
+}
+
+.change .divFooter3 {
+    transform: rotate(45deg) translate(-8px, -8px);
+    background-color: red;
+}
+
+/*------------------Styling nav links bottom for small screen.----------------*/
+
+.footerMobileLinks {
+    width: 100%;
+    background-color: black;
+    height: 0;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    overflow-y: hidden;
+    transition: 0.6s;
+}
+
+.footerMobileLinks a {
+    color: #f1f1f1;
+    text-align: center;
+    font-size: 25px;
+    display: block;
+    text-decoration: none;
+    transition: 0.4s;
+    padding: 4px;
+}
+
+.footerMobileLinks a:hover {
+    cursor: default;
+}
+
+.footer-end-main {
+    padding: 10px 32px 2px 512px;
+    background-color: black;
+}
+
+.footer-end-main p {
+    font-family: 'Neuton';
+    font-size: 20px;
+    color: #f1f1f1;
+    letter-spacing: 1px;
+}
+
+.footer-end-main a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.footer-end-main a:hover {
+    color: #a7aaad;
+}
+
+.footer-end {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-end-main-s {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-end-main-s p {
+    font-family: 'Neuton';
+    font-size: 18px;
+    color: #f1f1f1;
+}
+
+
+/*----------------------------------------------Media Query.----------------------------------------*/
+
+
+@media screen and (max-width: 600px) {
+    .header {
+        display: block;
+    }
+
+    /*-----------------------------------------*/
+    .mobileLogo {
+        display: block;
+    }
+
+    .mobileLogo a:hover {
+        cursor: default;
+    }
+
+    /*---------------------------------------*/
+    .imgCont {
+        display: none;
+    }
+
+    /*--------------------------------------*/
+    .mainSearch {
+        display: none;
+    }
+
+    /*--------------------------------------*/
+    .greetings {
+        margin-top: -16px;
+        border-bottom: 2px dotted black;
+    }
+
+    /*-------------------------------------*/
+    .exBtn {
+        padding-bottom: 12px;
+        margin-left: 200px;
+    }
+
+    /*--------------------------------------*/
+    .profileImg {
+        margin-top: -44px;
+        margin-left: 10px;
+    }
+
+    /*-------------------------------------------*/
+
+    .profileName {
+        margin-left: 10px;
+    }
+
+    /*-------------------------------------*/
+    .loading {
+        margin-left: 210px;
+        margin-top: -14px;
+    }
+
+    /*-------------------------------------*/
+    .LSC {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 50px;
+        margin-top: 17px;
+        border: 2px solid black;
+        border-radius: 2px;
+        background-color: #f3f3f3;
+    }
+
+    /*-----------------------------------------*/
+    .linksMobile {
+        display: block;
+        width: 80px;
+    }
+
+    /*--------------------------------------*/
+    .searchMobile {
+        display: block;
+        width: 130px;
+    }
+
+    .searchMobile button {
+        padding: 4px;
+        margin-top: 8px;
+        margin-left: 28px;
+    }
+
+    /*----------------------------------------*/
+    .cartImg {
+        display: none;
+    }
+
+    .cart {
+        width: 110px;
+    }
+
+    .cartName {
+        margin-top: -38px;
+    }
+
+    /*----------------------------------------*/
+    .profile {
+        height: 90px;
+        border-bottom: 2px dotted black;
+        padding-bottom: 6px;
+    }
+
+    .profile img {
+        border: 2px solid red;
+    }
+
+    .profile img:hover {
+        cursor: default;
+    }
+
+    /*----------------------------------------*/
+    .eBtn {
+        margin-bottom: 12px;
+        margin-left: 200px;
+    }
+
+    #eBtn {
+        opacity: 1;
+    }
+
+    #eBtn:hover {
+        cursor: default;
+        animation: none;
+    }
+
+    /*--------------------------------------*/
+
+    .exBtn input[type=button]:hover {
+        animation: none;
+        opacity: 1;
+        cursor: default;
+    }
+
+    /*----------------------------*/
+
+    .divForm1 {
+        margin-top: 46px;
+        right: 134px;
+    }
+
+    .divForm1 input[type=submit] {
+        opacity: 1;
+    }
+
+    .divForm1 input[type=submit]:hover {
+        cursor: default;
+    }
+
+    #reg:hover {
+        cursor: default;
+        background-color: red;
+        color: black;
+    }
+
+    /*-------------------------------------*/
+    .navLinksDesctop {
+        display: none;
+    }
+
+    /*------------------------------------*/
+    .questionFrame {
+        margin-left: 50px;
+    }
+
+    .questionCont button:hover {
+        font-weight: normal;
+        border: none;
+        cursor: default;
+        background-color: #dcdcde;
+    }
+
+    .closeQuestion button:hover {
+        background-color: white;
+        border-radius: 0;
+        color: red;
+        cursor: default;
+    }
+
+    /*---------------------------------*/
+    .footerDesctop {
+        display: none;
+    }
+
+    /*-----------------------------------*/
+    .footerMobileButtonMain {
+        display: block;
+    }
+
+    /*------------------------------------*/
+    .closeForm:hover {
+        cursor: default;
+        color: black;
+    }
+
+    /*--------------------------------*/
+    .eye img {
+        border: none;
+    }
+
+    /*---------------------------------*/
+
+    .forgotpsw {
+        text-decoration: underline;
+    }
+
+    .forgotpsw:hover {
+        cursor: default;
+    }
+
+    /*---------------------------------------*/
+
+    .cartName a:hover {
+        cursor: default;
+        text-decoration: none;
+    }
+
+    /*--------------------------------*/
+
+    .footer-end-main {
+        display: none;
+    }
+
+    .footer-end-main-s {
+        display: block;
+    }
+
+    body {
+        overflow-y: scroll;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+}

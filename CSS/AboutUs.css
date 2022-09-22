@@ -1,0 +1,103 @@
+.parallax1 {
+    background-image: url("../blogimages/blogbackground1.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 380px;
+}
+
+.parallax2 {
+    background-image: url("../blogimages/blogbackground2.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 380px;
+}
+
+.parallax3 {
+    background-image: url("../blogimages/blogbackground3.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 380px;
+}
+
+.parallax4 {
+    background-image: url("../blogimages/blogbackground1.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 380px;
+}
+
+.about, .about1 {
+    padding: 28px;
+    background-image: url("../Image/background.jpg");
+    background-repeat: repeat;
+}
+
+.about h2 {
+    font-family: 'Neuton';
+    text-shadow: 2px 2px 5px red;
+    text-indent: 36px;
+}
+
+.about1 h2 {
+    font-family: 'Neuton';
+    text-shadow: 2px 2px 5px red;
+    text-indent: 36px;
+}
+
+.about p {
+    font-family: 'Neuton';
+    font-size: 20px;
+}
+
+.about1 p {
+    font-family: 'Neuton';
+    font-size: 20px;
+}
+
+/*-------------------------------------Media Query.-----------------------------*/
+
+@media screen and (max-width: 600px) {
+    .parallax1, .parallax3, .parallax4 {
+        display: none;
+    }
+
+    .about h2 {
+        font-size: 20px;
+    }
+
+    .about1 h2 {
+        font-size: 20px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
+
+    .about1 p {
+        font-size: 16px;
+    }
+
+    .about1 {
+        margin-top: 110px;
+    }
+
+    body {
+        background: url("../Image/background.jpg") repeat;
+    }
+
+    .about, .about1 {
+        padding: 8px;
+    }
+
+    .parallax2 {
+        height: 200px;
+    }
+}
